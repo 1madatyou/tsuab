@@ -5,6 +5,7 @@ class News(models.Model):
     """Модель новости"""
     title = models.CharField(max_length=255, verbose_name="Заголовок")
     text = models.TextField(verbose_name="Текст новости")
+    date_created = models.DateTimeField(verbose_name="Дата создания", editable=False, auto_now_add=True)
 
     def __str__(self):
         return f"Новость: {self.title}"
@@ -23,8 +24,8 @@ class NewsPicture(models.Model):
         return "Изображение новости"
     
     class Meta:
-        verbose_name = "Изображение новости"
-        verbose_name_plural = "Изображения новостей"
+        verbose_name = "Изображение"
+        verbose_name_plural = "Изображения"
 
 
 

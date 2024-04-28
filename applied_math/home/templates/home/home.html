@@ -65,31 +65,23 @@
   <div class="news__title-wrapper">
     <h2 class="news__title">Новости</h2>
 
-    <a class="news__link" href="news.html">Все новости</a>
+    <a class="news__link" href="{% url 'news' %}">Все новости</a>
   </div>
 
   <ul class="list-reset news__list">
-    <li class="news__item">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </li>
-    <li class="news__item">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </li>
-    <li class="news__item">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </li>
+
+    {% for news in last_news %}
+
+      <li class="news__item">
+        <img class="news__item-img" loading="lazy" src="{{ news.pictures.last.picture.url }}" alt="" aria-hidden="true">
+        <h3 class="news__item-title">{{ news.title }}</h3>
+        <p class="news__item-descr">
+          {{ news.text }}
+        </p>
+      </li>
+
+    {% endfor %}
+
   </ul>
 </div>
 </section>
