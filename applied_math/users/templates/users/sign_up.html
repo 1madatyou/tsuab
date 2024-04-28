@@ -11,20 +11,22 @@
 
   <form class="sign-in__form" method="POST"> {% csrf_token %}
     <div class="sign-in__form-inputs"> 
+
       <label class="sign-in__label sign-in__label--user">
         <input class="sign-in__input" name="email" type="text" placeholder="Введите адрес электронной почты">
       </label>
+      {{ form_errors.email }}
+
       <label class="sign-in__label sign-in__label--password">
         <input class="sign-in__input" name="password" type="password" placeholder="Введите пароль">
       </label>
+      {{ form_errors.password}}
+
       <label class="sign-in__label sign-in__label--password">
         <input class="sign-in__input" name="repeat_password" type="password" placeholder="Повторите пароль">
       </label>
-      {% if form_errors %}
+      {{ form_errors.repeat_password }}
 
-        {{ form_errors }}
-
-      {% endif %}
       <h3 class="sign-in__subtitle">Уже зарегистрированы?</h3>
       <div class="sign-in__links">
         <a href="{% url 'sign_in' %}" class="sign-in__link">Вход</a>

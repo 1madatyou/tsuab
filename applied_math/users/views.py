@@ -45,7 +45,6 @@ class SignUp(TemplateView):
             return redirect('home')
         else:
             context = self.get_context_data()
-            print(user_form.errors)
             context.update(
                 {'form_errors': user_form.errors}
             )

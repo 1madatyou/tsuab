@@ -21,8 +21,8 @@ class SignUpForm(forms.ModelForm):
     def clean_repeat_password(self):
         """Проверка на совпадение паролей"""
         cd = self.cleaned_data
-        password = cd['password']
-        repeat_password = cd['repeat_password']
+        password = cd.get('password')
+        repeat_password = cd.get('repeat_password')
         if repeat_password != password:
             print('ПАРОЛИ НЕ СОВПАДАЮТ')
             raise forms.ValidationError('Пароли не совпадают')
