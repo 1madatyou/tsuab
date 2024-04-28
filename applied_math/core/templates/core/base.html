@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{% static 'favicon.svg' %}" type="image/svg+xml">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>ТГАСУ Прикладная Математика</title>
+  <link rel="preload" href="{% static 'fonts/Roboto-Medium.woff2' %}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{% static 'fonts/Roboto-Bold.woff2' %}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <script defer src="{% static 'js/main.js' %}"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__content">
+            <div class="container nav__container">
+                <div class="nav__btns-wrapper">
+                    {% if request.user.is_authenticated %}
+                        <form action="{% url 'logout' %}" method="POST" >
+                            {% csrf_token %}
+                            <button class="btn-reset btn nav__btn" href="{% url 'logout' %}">Выход</button>
+                        </form>
+                    {% else %}
+                        <a class="btn-reset btn nav__btn" href="{% url 'sign_in' %}">Вход</a>
+                        <a class="btn-reset btn nav__btn" href="{% url 'sign_up' %}">Регистрация</a>
+                    {% endif %}
+                </div>
+
+                <div class="nav__btns-wrapper">
+                <button class="btn-reset btn nav__btn nav__btn--icon" aria-label="Сменить язык">
+                    <img loading="lazy" src="{% static 'img/header/header-lang.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+                </button>
+                <button class="btn-reset btn nav__btn nav__btn--icon" aria-label="Включить версию для слабовидящих">
+                    <svg viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 2.28564C8.72122 2.28564 4.12175 8.72446 2.48622 11.5865C2.15067 12.1737 1.98291 12.4673 2.00137 12.9053C2.01985 13.3432 2.21711 13.6294 2.6116 14.2018C4.55835 17.0261 9.84366 23.5747 17 23.5747C24.1563 23.5747 29.4417 17.0261 31.3884 14.2018C31.7829 13.6294 31.9801 13.3432 31.9986 12.9053C32.017 12.4673 31.8493 12.1737 31.5138 11.5865C29.8782 8.72446 25.2787 2.28564 17 2.28564Z" stroke="currentcolor" stroke-width="3"/>
+                    <path d="M17 18C19.7614 18 22 15.7614 22 13C22 10.2386 19.7614 8 17 8C14.2386 8 12 10.2386 12 13C12 15.7614 14.2386 18 17 18Z" fill="currentcolor"/>
+                    </svg>
+                </button>
+                </div>
+            </div>
+            </div>
+
+            <div class="nav__sub-content">
+            <div class="container nav__container">
+                <a class="nav__logo-link" href="{% url 'home' %}">
+                <img loading="lazy" src="{% static 'img/logo.svg' %}" width="228" height="89" alt="Логотип ТГАСУ">
+                </a>
+
+                <ul class="list-reset nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="{% url 'home' %}">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">О кафедре</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="{% url 'news_list' %}">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Абитуриентам</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Контакты</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Помощь</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="container footer__content">
+            <div class="footer__lang">
+            <button class="btn-reset footer__btn">
+                <img loading="lazy" src="{% static 'img/header/header-lang.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+            </button>
+            <button class="btn-reset footer__btn">
+                <svg viewBox="0 0 34 26" fill="none" xmlns="{% static 'http://www.w3.org/2000/svg' %}">
+                <path d="M17 2.28564C8.72122 2.28564 4.12175 8.72446 2.48622 11.5865C2.15067 12.1737 1.98291 12.4673 2.00137 12.9053C2.01985 13.3432 2.21711 13.6294 2.6116 14.2018C4.55835 17.0261 9.84366 23.5747 17 23.5747C24.1563 23.5747 29.4417 17.0261 31.3884 14.2018C31.7829 13.6294 31.9801 13.3432 31.9986 12.9053C32.017 12.4673 31.8493 12.1737 31.5138 11.5865C29.8782 8.72446 25.2787 2.28564 17 2.28564Z" stroke="currentcolor" stroke-width="3"></path>
+                <path d="M17 18C19.7614 18 22 15.7614 22 13C22 10.2386 19.7614 8 17 8C14.2386 8 12 10.2386 12 13C12 15.7614 14.2386 18 17 18Z" fill="currentcolor"></path>
+                </svg>
+            </button>
+            </div>
+            <ul class="list-reset footer__list">
+            <li class="footer__item">
+                Мы находимся:
+                <span class="footer__item-text">г. Томск, Соляная пл., 2</span>
+            </li>
+            <li class="footer__item">
+                Приёмная комиссия:
+                <a class="footer__item-text" href="tel:+79242444564">+7 924 244-45-64</a>
+            </li>
+            <li class="footer__item">
+                Электронная почта:
+                <a class="footer__item-text" href="tel:+79242444564">prikladmat@gmail.com</a>
+            </li>
+            </ul>
+            <div class="footer__copyright">
+            © 2024 ФГБОУ ВО «Томский государственный архитектурно-строительный университет»
+        При перепечатке текстовой информации и фотографий ссылка на сайт ТГАСУ
+        обязательна. 1зиаБ.ги
+            </div>
+        </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
