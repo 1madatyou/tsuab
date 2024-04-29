@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  django:
+    build: 
+      context: ./applied_math
+      dockerfile: Dockerfile
+    command: sh -c "python /usr/src/tsuab/applied_math/manage.py migrate && python /usr/src/tsuab/applied_math/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/usr/src/tsuab
+    ports:
+      - 8000:8000
+  
