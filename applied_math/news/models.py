@@ -8,7 +8,15 @@ class News(models.Model):
     date_created = models.DateTimeField(verbose_name="Дата создания", editable=False, auto_now_add=True)
 
     def __str__(self):
-        return f"Новость: {self.title}"
+        return f"{self.title}"
+    
+    def get_last_picture_url(self):
+        """Возвращает url последнего изображения новости"""
+        return self.pictures.last().picture.url
+    
+    def get_formatted_date_created(self):
+        """Возвращает отформатированную дату создания новости"""
+        return self.date_created.strftime("%d.%m.%Y")
 
     class Meta:
         verbose_name = "Новость"
@@ -22,7 +30,7 @@ class NewsPicture(models.Model):
 
     def __str__(self):
         return "Изображение новости"
-    
+
     class Meta:
         verbose_name = "Изображение"
         verbose_name_plural = "Изображения"

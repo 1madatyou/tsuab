@@ -11,66 +11,35 @@
   </div>
 
   <div class="list-reset news__list news__list--full">
-    <a class="news__item" href="#">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </a>
-    <a class="news__item" href="#">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </a>
-    <a class="news__item" href="#">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </a>
-    <a class="news__item" href="#">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </a>
-    <a class="news__item" href="#">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </a>
-    <a class="news__item" href="#">
-      <img class="news__item-img" loading="lazy" src="{% static 'img/news/news-img-1.png' %}" alt="" aria-hidden="true">
-      <h3 class="news__item-title">Университет представил список на отчисление</h3>
-      <p class="news__item-descr">
-        Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток.
-      </p>
-    </a>
+    {% for n in news %}
+
+      <a class="news__item" href="{% url 'news_detail' n.pk %}">
+        <img class="news__item-img" loading="lazy" src="{{ n.pictures.last.picture.url }}" alt="" aria-hidden="true">
+        <h3 class="news__item-title">{{ n.title }}</h3>
+        <p class="news__item-descr">
+          {{ n.text }}
+        </p>
+      </a>
+
+    {% endfor %}
+    
   </div>
 
   <ul class="list-reset news__pagination">
-    <li class="news__pagination-item">
-      <a class="news__pagination-link news__pagination-link--active">1</a>
-    </li>
-    <li class="news__pagination-item">
-      <a class="news__pagination-link" href="#">2</a>
-    </li>
-    <li class="news__pagination-item">
-      <a class="news__pagination-link" href="#">3</a>
-    </li>
-    <li class="news__pagination-item">
-      <a class="news__pagination-link" href="#">4</a>
-    </li>
-    <li class="news__pagination-item">
-      <a class="news__pagination-link" href="#">5</a>
-    </li>
+
+    {% for p in paginator.page_range %}
+      {% if p == page_obj.number %}
+        <li class="news__pagination-item">
+          <a class="news__pagination-link news__pagination-link--active" href="?page{{ p }}">{{ p }}</a>
+        </li>
+      {% else %}
+        <li class="news__pagination-item">
+          <a class="news__pagination-link" href="?page={{ p }}">{{ p }}</a>
+        </li>
+      {% endif %}
+
+    {% endfor %}
+
   </ul>
   </div>
   </section>

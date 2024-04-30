@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main class="main">
+    <section class="news news-full">
+        <div class="container">
+            <div class="news__title-wrapper">
+                <h2 class="news__title">Новости</h2>
+
+                <a class="news__link" href="{% url 'news_list' %}">Все новости</a>
+            </div>
+
+            <div class="news-full__content">
+                <img class="news-full__img" loading="lazy" src="{{ n.get_last_picture_url }}" width="790" height="383" alt="Наша новость">
+
+                <h2 class="news-full__title">{{ n.title }}</h2>
+
+                <div class="news-full__date">{{ n.get_formatted_date_created }}</div>
+
+                <p class="news-full__descr">
+                    {{ n.text }}
+                </p>
+            </div>
+
+            <a class="news__link news__link--full" href="news.html">Назад</a>
+        </div>
+    </section>
+
+  </main>
+{% endblock %}
