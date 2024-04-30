@@ -16,6 +16,11 @@ urlpatterns = [
     path('', include('users.urls'))
 ]
 
+admin.site.site_header = "Администрирование"
+admin.site.index_title = "Кафедра прикладной математики"
+
+
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -1,0 +1,27 @@
+html[data-theme="light"], :root {
+    --header-bg: #861F41;
+    --breadcrumbs-bg: #322243;
+    --link-fg: #861F41;
+    --accent: #fff;
+    --body-quiet-color: #494949;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/../fonts/Roboto-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+} 
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/../fonts/Roboto-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+body {
+    font-family: "Roboto", "sans-serif";
+}
