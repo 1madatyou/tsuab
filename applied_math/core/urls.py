@@ -4,15 +4,20 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 
+from .views import home_redirect
+
+
 handler404 = 'core.views.handler404'
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+
     path('home/', include('home.urls')),
     path('news/', include('news.urls')),
     
+    path('', home_redirect),
     path('', include('users.urls'))
 ]
 
