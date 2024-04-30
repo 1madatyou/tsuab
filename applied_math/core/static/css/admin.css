@@ -1,5 +1,5 @@
 html[data-theme="light"], :root {
-    --header-bg: #861F41;
+    --header-bg: yellow;
     --breadcrumbs-bg: #322243;
     --link-fg: #861F41;
     --accent: #fff;
