@@ -8,7 +8,7 @@ class NewsList(ListView):
     template_name = 'news/news_list.html'
     model = News
     context_object_name = 'news'
-    paginate_by = 1
+    paginate_by = 6
 
     
 class NewsDetail(DetailView):
