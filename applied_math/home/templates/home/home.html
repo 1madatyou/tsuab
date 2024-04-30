@@ -68,21 +68,21 @@
     <a class="news__link" href="{% url 'news_list' %}">Все новости</a>
   </div>
 
-  <ul class="list-reset news__list">
+  <div class="list-reset news__list">
 
     {% for news in last_news %}
 
-      <li class="news__item">
+      <a class="news__item" href="#">
         <img class="news__item-img" loading="lazy" src="{{ news.pictures.last.picture.url }}" alt="" aria-hidden="true">
         <h3 class="news__item-title">{{ news.title }}</h3>
         <p class="news__item-descr">
           {{ news.text }}
         </p>
-      </li>
+      </a>
 
     {% endfor %}
 
-  </ul>
+  </div>
 </div>
 </section>
 

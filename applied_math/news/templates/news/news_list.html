@@ -26,16 +26,16 @@
     
   </div>
 
-  <ul class="list-reset news__pagination">
+  <ul class="list-reset pagination">
 
     {% for p in paginator.page_range %}
       {% if p == page_obj.number %}
-        <li class="news__pagination-item">
-          <a class="news__pagination-link news__pagination-link--active" href="?page{{ p }}">{{ p }}</a>
+        <li class="pagination-item">
+          <a class="pagination-link pagination-link--active" href="?page{{ p }}">{{ p }}</a>
         </li>
       {% else %}
-        <li class="news__pagination-item">
-          <a class="news__pagination-link" href="?page={{ p }}">{{ p }}</a>
+        <li class="pagination-item">
+          <a class="pagination-link" href="?page={{ p }}">{{ p }}</a>
         </li>
       {% endif %}
 

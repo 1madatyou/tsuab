@@ -501,9 +501,13 @@ a {
   font-size: 16px;
   line-height: 125%;
   color: rgba(32, 32, 32, 0.5);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
-.news__pagination {
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,14 +520,14 @@ a {
   gap: 50px;
 }
 
-.news__pagination-link {
+.pagination-link {
   font-weight: 700;
   font-size: 23px;
   color: var(--dark-color);
   opacity: 0.7;
 }
 
-.news__pagination-link--active {
+.pagination-link--active {
   color: var(--main-color);
   opacity: 1;
 }
