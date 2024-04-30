@@ -16,6 +16,7 @@
       <a class="news__item" href="{% url 'news_detail' n.pk %}">
         <img class="news__item-img" loading="lazy" src="{{ n.pictures.last.picture.url }}" alt="" aria-hidden="true">
         <h3 class="news__item-title">{{ n.title }}</h3>
+        <div class="news-full__date">{{ n.get_formatted_date_created }}</div>
         <p class="news__item-descr">
           {{ n.text }}
         </p>

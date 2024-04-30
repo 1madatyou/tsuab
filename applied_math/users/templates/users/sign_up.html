@@ -13,6 +13,18 @@
     <div class="sign-in__form-inputs"> 
 
       <label class="sign-in__label sign-in__label--user">
+        <input class="sign-in__input" name="surname" type="text" placeholder="Введите фамилию">
+      </label>
+
+      <label class="sign-in__label sign-in__label--user">
+        <input class="sign-in__input" name="name" type="text" placeholder="Введите имя">
+      </label>
+
+      <label class="sign-in__label sign-in__label--user">
+        <input class="sign-in__input" name="second-surname" type="text" placeholder="Введите отчество">
+      </label>
+
+      <label class="sign-in__label sign-in__label--email">
         <input class="sign-in__input" name="email" type="text" placeholder="Введите адрес электронной почты">
       </label>
       {{ form_errors.email }}
