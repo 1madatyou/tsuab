@@ -7,7 +7,6 @@ from .models import News
 class NewsList(ListView):
     template_name = 'news/news_list.html'
     model = News
-    ordering = '-id'
     context_object_name = 'news'
     paginate_by = 1
 

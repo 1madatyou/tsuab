@@ -21,6 +21,7 @@ class News(models.Model):
     class Meta:
         verbose_name = "Новость"
         verbose_name_plural = "Новости"
+        ordering = ['-id']
 
 
 class NewsPicture(models.Model):
