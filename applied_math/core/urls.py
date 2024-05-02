@@ -18,7 +18,8 @@ urlpatterns = [
     path('news/', include('news.urls')),
     
     path('', home_redirect),
-    path('', include('users.urls'))
+    path('', include('users.urls')),
+
 ]
 
 admin.site.site_header = "Администрирование"

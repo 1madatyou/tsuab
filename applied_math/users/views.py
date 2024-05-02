@@ -1,8 +1,16 @@
+from typing import Any
+from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.views import (
+    PasswordResetView, 
+    PasswordResetDoneView,
+    PasswordResetConfirmView,
+    PasswordResetCompleteView
+)
 
-from .forms import SignUpForm
+from .forms import SignUpForm, CustomPasswordResetForm
 
 
 class SignIn(TemplateView):
@@ -50,6 +58,28 @@ class SignUp(TemplateView):
             )
         
         return self.render_to_response(context)
+    
+
+class RPD(TemplateView):
+    template_name = 'users/reset_password_done.html'
+
+
+class CustomPasswordResetView(PasswordResetView):
+    template_name = 'users/reset_password.html'
+    html_email_template_name = 'mail/reset_password_mail.html'
+    form_class = CustomPasswordResetForm
+
+
+class CustomPasswordResetDoneView(PasswordResetDoneView):
+    template_name = 'users/reset_password_done.html'
+
+
+class CustomPasswordResetConfirmView(PasswordResetConfirmView):
+    template_name = 'users/reset_password_confirm.html'
+
+
+class CustomPasswordResetCompleteView(PasswordResetCompleteView):
+    template_name = 'users/reset_password_complete.html'
 
 
 

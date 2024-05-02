@@ -1,9 +1,9 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import PasswordResetForm
 
 
 User = get_user_model()
-
 
 class SignInForm(forms.ModelForm):
     """Форма авторизации"""
@@ -15,7 +15,6 @@ class SignInForm(forms.ModelForm):
 
 class SignUpForm(forms.ModelForm):
     """Форма регистрации"""
-
     repeat_password = forms.CharField()
 
     def clean_repeat_password(self):
@@ -31,3 +30,12 @@ class SignUpForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('email', 'password', 'name', 'surname', 'patronymic')
+
+
+class CustomPasswordResetForm(PasswordResetForm):
+    """Форма сброса пароля"""
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if not User.objects.filter(email=email).exists():
+            raise forms.ValidationError('Пользователя с таким электронным адресом не существует')
+        return email

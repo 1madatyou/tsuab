@@ -507,6 +507,37 @@ a {
   -webkit-box-orient: vertical;
 }
 
+.message-wrapper {
+  background-color: var(--blue-color);
+  width: 600px;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 24px;
+  font-weight: normal;
+  word-break: break-word;
+  color: var(--light-color);
+}
+
+.message__title {
+  font-size: 30px;
+  color: var(--light-color);
+  text-align: center;
+}
+
+.message__line {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+  margin-bottom: 30px;
+  height: 2px;
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;

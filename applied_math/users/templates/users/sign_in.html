@@ -28,7 +28,7 @@
       <h3 class="sign-in__subtitle">Дополнительно</h3>
       <div class="sign-in__links">
         <a href="{% url 'sign_up' %}" class="sign-in__link">Регистрация</a>
-        <a href="reset-password.html" class="sign-in__link">Забыли пароль?</a>
+        <a href="{% url 'reset_password' %}" class="sign-in__link">Забыли пароль?</a>
       </div>
     </div>
     <button class="btn-reset sign-in__btn" type="submit">Вход</button>
