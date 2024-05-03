@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="main">
+  <section class="sign-in">
+<div class="container">
+<div class="form-wrapper">
+  <h2 class="form__title">Задайте свой вопрос</h2>
+
+  <form class="sign-in__form" method="POST"> {% csrf_token %}
+    <div class="form-inputs"> 
+
+      <label class="form__label form__label--user">
+        <input class="form__input" name="user_name" type="text" placeholder="Ваше имя">
+      </label>
+      {{ form.errors.user_name }}
+
+      <label class="form__label form__label--email">
+        <input class="form__input" name="user_email" type="text" placeholder="Ваш электронный адрес">
+      </label>
+      {{ form.errors.user_email }}
+
+      <label class="form__label form__label--subject">
+        <input class="form__input" name="subject" type="text" placeholder="Тема обращения">
+      </label>
+      {{ form.errors.subject }}
+
+      <label class="form__label form__label--text">
+        <textarea class="form__textarea" name="text" type="text" placeholder="Ваш вопрос"></textarea>
+      </label>
+      {{ form.errors.text }}
+
+    </div>
+    <button class="btn-reset sign-in__btn" type="submit">Отправить</button>
+  </form>
+</div>
+</div>
+</section>
+
+</main>
+
+{% endblock %}

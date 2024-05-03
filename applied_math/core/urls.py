@@ -13,8 +13,8 @@ handler404 = 'core.views.handler404'
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-
     path('home/', include('home.urls')),
+    path('support/', include('support.urls')),
     path('news/', include('news.urls')),
     
     path('', home_redirect),

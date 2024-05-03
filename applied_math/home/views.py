@@ -1,8 +1,6 @@
 from django.views.generic.base import TemplateView
-from django.views.generic import FormView
 
 from news.models import News 
-from .forms import SupportTicketForm
 
 
 class Home(TemplateView):
@@ -15,9 +13,7 @@ class Home(TemplateView):
         return context
     
 
-class Support(FormView):
-    template_name = 'home/support.html'
-    form_class = SupportTicketForm
+
     
 
 
