@@ -8,7 +8,7 @@ class SupportTicket(models.Model):
     subject = models.CharField(verbose_name="Тема", max_length=255)
     text = models.TextField(verbose_name="Текст")
 
-    date_created = models.DateTimeField(auto_now_add=True, editable=False)
+    date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.subject
