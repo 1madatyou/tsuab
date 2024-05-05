@@ -7,6 +7,7 @@
   --dark-color: #202020;
   --blue-color: #322243;
   --main-color: #861F41;
+  --light-main-color: rgba(134, 31, 65, 0.5);
 }
 
 /* stylelint-disable */
@@ -257,7 +258,6 @@ a {
 .dropdown::after {
   content: url("../img/nav/navigation_dropdown_arrow.svg");
   position: relative;
-  left: 1px;
 }
 
 /* Кнопка выпадающего списка */
@@ -597,6 +597,74 @@ a {
   height: 2px;
 }
 
+/* Дипломные работы */
+
+.theses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.theses-item {
+  padding: 25px;
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  background-color: var(--light-main-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* добавляем тень */
+  transition: transform 0.3s ease; /* добавляем анимацию при наведении */
+}
+
+.theses-item:hover {
+  transform: translateY(-5px); /* поднимаем элемент при наведении */
+}
+
+.theses-item__content-wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.theses-item__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-color); /* меняем цвет текста */
+  font-family: Arial, sans-serif; /* выбираем другой шрифт */
+}
+
+.theses-item__date {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--dark-color); /* меняем цвет текста */
+  font-family: Arial, sans-serif; /* выбираем другой шрифт */
+}
+
+.theses-item__file-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theses-item__file {
+  display: flex; 
+  gap: 2px;
+  font-size: 18px;
+  color: var(--blue-color); /
+}
+
+.theses-item__file::after {
+  content: url("../img/theses/open.svg");
+  align-items: center;
+  position: relative;
+}
+
+/* Пример анимации при наведении на кнопку "Скачать" */
+.theses-item__file:hover {
+  color: var(--blue-color-light); /* меняем цвет текста при наведении */
+  cursor: pointer; /* меняем курсор на указатель */
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,6 +689,16 @@ a {
   color: var(--main-color);
   opacity: 1;
 }
+/* 
+.pagination-arrow--prev::after {
+  color: var(--main-color);
+  background-image: url('../img/hero/hero-prev.svg');
+}
+
+.pagination-arrow--next::after {
+  color: var(--main-color);
+  background-image: url('../img/hero/hero-next.svg');
+} */
 
 .sign-in {
   padding: 100px 0 150px;

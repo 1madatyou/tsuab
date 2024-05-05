@@ -66,7 +66,7 @@
                     <div class="dropdown">
                         <a class="nav__link">О кафедре</a>
                         <div class="dropdown-content">
-                            <a class="nav__link" href="#">Дипломные работы</a>
+                            <a class="nav__link" href="{% url 'theses_list' %}">Дипломные работы</a>
                         </div>
                     </div>
                 </li>
@@ -109,7 +109,12 @@
                     <a class="nav__link" href="{% url 'home' %}">Главная</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="#">О кафедре</a>
+                    <div class="dropdown">
+                        <a class="nav__link">О кафедре</a>
+                        <div class="dropdown-content">
+                            <a class="nav__link" href="{% url 'theses_list' %}">Дипломные работы</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="{% url 'news_list' %}">Новости</a>
@@ -121,7 +126,7 @@
                     <a class="nav__link" href="#">Контакты</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="#">Помощь</a>
+                    <a class="nav__link" href="{% url 'support' %}">Помощь</a>
                 </li>
             </ul>
             <ul class="list-reset footer__list">

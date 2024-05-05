@@ -1,0 +1,37 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+
+{% block content %}
+  <main class="main">
+    <section class="news">
+  <div class="container">
+  <div class="news__title-wrapper">
+    <h2 class="news__title">Дипломные работы</h2>
+  </div>
+
+  <div class="theses-list">
+    {% for t in theses %}
+      <div class="theses-item">
+        <div class="theses-item__content-wrapper">
+          <div class="theses-item__title">
+            {{t.title}}
+          </div>
+          <div class="theses-item__file-wrapper">
+            <div class="theses-item__date">
+              {{ t.get_formatted_date_upload }}
+            </div>
+            <a class="theses-item__file" href="{{ t.file.url }}" target="_blank" ></a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    
+  </div>
+
+  {% include 'includes/pagination.html' %}
+  </div>
+  </section>
+
+  </main>
+{% endblock %}

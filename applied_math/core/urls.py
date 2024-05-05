@@ -16,6 +16,7 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('support/', include('support.urls')),
     path('news/', include('news.urls')),
+    path('theses/', include('theses.urls')),
     
     path('', home_redirect),
     path('', include('users.urls')),

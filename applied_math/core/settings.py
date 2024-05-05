@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'home',
     'support',
     'users',
+    'theses',
 ]
 
 MIDDLEWARE = [

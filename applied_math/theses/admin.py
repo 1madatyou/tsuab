@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import DiplomaThesis
+
+
+@admin.register(DiplomaThesis)
+class DiplomaThesesAdmin(admin.ModelAdmin):
+    list_display = ['title', 'date_upload']
