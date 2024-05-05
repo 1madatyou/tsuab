@@ -26,22 +26,9 @@
     
   </div>
 
-  <ul class="list-reset pagination">
+  {% include 'includes/pagination.html' %}
 
-    {% for p in paginator.page_range %}
-      {% if p == page_obj.number %}
-        <li class="pagination-item">
-          <a class="pagination-link pagination-link--active" href="?page{{ p }}">{{ p }}</a>
-        </li>
-      {% else %}
-        <li class="pagination-item">
-          <a class="pagination-link" href="?page={{ p }}">{{ p }}</a>
-        </li>
-      {% endif %}
 
-    {% endfor %}
-
-  </ul>
   </div>
   </section>
 

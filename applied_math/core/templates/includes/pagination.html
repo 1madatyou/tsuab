@@ -1,0 +1,41 @@
+{% load static %}
+
+{% if page_obj.num_pages > 1 %}
+
+  <ul class="list-reset pagination">
+      
+    {% if page_obj.has_previous %}
+
+        <li class="pagination-item">
+            <a class="pagination-link pagination-link--active" href="?page={{ page_obj.previous_page_number }}">Назад</a>
+        </li>
+
+    {% endif %}
+
+    {% for p in paginator.page_range %}
+
+      {% if p == page_obj.number %}
+        <li class="pagination-item">
+          <a class="pagination-link pagination-link--active" href="?page{{ p }}">{{ p }}</a>
+        </li>
+      {% else %}
+        {% if page_obj.number|add:-5 <= p and p <= page_obj.number|add:5 %}
+            <li class="pagination-item">
+                <a class="pagination-link" href="?page={{ p }}">{{ p }}</a>
+            </li>
+        {% endif %}
+      {% endif %}
+
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+
+        <li class="pagination-item">
+            <a class="pagination-link pagination-link--active" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+        </li>
+
+    {% endif %}
+      
+  </ul>
+
+{% endif %}
