@@ -25,17 +25,19 @@
       </label>
 
       <label class="form__label form__label--email">
-        <input class="form__input" name="email" type="text" placeholder="Введите адрес электронной почты">
+        <input class="form__input" name="email" autocomplete="off" type="text" placeholder="Введите адрес электронной почты">
       </label>
       {{ form_errors.email }}
 
       <label class="form__label form__label--password">
-        <input class="form__input" name="password" type="password" placeholder="Введите пароль">
+        <input class="form__input" name="password" autocomplete="off" type="password" placeholder="Введите пароль">
+        <button class="toggle-eye" type="button"></button>
       </label>
       {{ form_errors.password}}
 
       <label class="form__label form__label--password">
         <input class="form__input" name="repeat_password" type="password" placeholder="Повторите пароль">
+        <button class="toggle-eye" type="button"></button>
       </label>
       {{ form_errors.repeat_password }}
 

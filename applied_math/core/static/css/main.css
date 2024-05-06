@@ -665,6 +665,36 @@ a {
   cursor: pointer; /* меняем курсор на указатель */
 }
 
+.toggle-eye {
+  position: absolute;
+  background: none;
+  background-image: url("../img/toggleEye/closed_eye.svg");
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  border: none;
+  right: 17px;
+  top: 11px;
+  color: #fff;
+}
+
+.toggle-eye {
+  position: absolute;
+  background: none;
+  background-image: url("../img/toggleEye/closed_eye.svg");
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  border: none;
+  right: 17px;
+  top: 11px;
+  cursor: pointer;
+}
+
+.toggle-eye--active {
+  background-image: url("../img/toggleEye/eye.svg");
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
