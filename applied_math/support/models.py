@@ -15,5 +15,4 @@ class SupportTicket(models.Model):
 
     class Meta:
         verbose_name = "Обращение"
-        verbose_name_plural = "Обращения"
-        
+        verbose_name_plural = "Обращения" 

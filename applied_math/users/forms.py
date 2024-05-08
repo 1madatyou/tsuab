@@ -5,6 +5,7 @@ from django.contrib.auth.forms import PasswordResetForm
 
 User = get_user_model()
 
+
 class SignInForm(forms.ModelForm):
     """Форма авторизации"""
 
