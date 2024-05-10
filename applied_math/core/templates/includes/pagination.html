@@ -1,9 +1,8 @@
 {% load static %}
 
-{% if page_obj.num_pages > 1 %}
 
   <ul class="list-reset pagination">
-      
+    
     {% if page_obj.has_previous %}
 
         <li class="pagination-item">
@@ -37,5 +36,3 @@
     {% endif %}
       
   </ul>
-
-{% endif %}

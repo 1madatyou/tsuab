@@ -8,4 +8,4 @@ class DiplomaThesesList(generic.ListView):
     model = DiplomaThesis
     context_object_name = 'theses'
     template_name = 'theses/theses_list.html'
-    paginate_by = 9
+    paginate_by = 6
