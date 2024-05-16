@@ -12,7 +12,19 @@ function togglePasswordVisibility() {
                 input.setAttribute('type', 'password')
             }
         });
-      }
+    }
+}
+
+function toggleVisuallyImpairedMode() {
+    const toggleButtons = document.querySelectorAll('.special-button')
+    const specialButton = document.querySelector('#specialButton')
+
+    for (var i = 0; i < toggleButtons.length; i++) {
+        toggleButtons[i].addEventListener("click", function() {
+            specialButton.click()
+        });
+    }
 }
 
 togglePasswordVisibility()
+toggleVisuallyImpairedMode()
