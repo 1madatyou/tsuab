@@ -206,6 +206,10 @@ a {
   background-color: var(--blue-color);
 }
 
+.nav__date {
+  color: var(--light-color);
+}
+
 .nav__btn--icon {
   display: -webkit-box;
   display: -ms-flexbox;

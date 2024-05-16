@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'support',
     'users',
     'theses',
+    'schedule'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'core.context_processors.get_date_context',
+
+                'schedule.context_processors.get_schedule_context'
             ],
         },
     },
