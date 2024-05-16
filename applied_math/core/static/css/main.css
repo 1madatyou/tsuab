@@ -935,7 +935,7 @@ a {
   gap: 30px;
 }
 
-.footer__lang {
+.footer-btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,6 +950,8 @@ a {
 
 .footer__btn {
   color: var(--light-color);
+  display: flex;
+  align-items: center;
 }
 
 .footer__btn svg {
