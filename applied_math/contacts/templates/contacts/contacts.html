@@ -1,0 +1,130 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<main class="main">
+    <section class="section">
+        <div class="container">
+            
+            <div class="section__title-wrapper">
+                <h1 class="section__title">Контакты</h1>
+            </div>
+
+            <div class="contact-block">
+                <div class="contact-block__info">
+                    <p class="contact-block__title">
+                        Головач Максим Константинович
+                    </p>
+                    <span class="contact-block__position">Студент, Дотер, Аналитик.</span>
+                    <div class="contact-block__items">
+                        <div class="contact-block__item">
+                            <div class="contact-block__subtitle">
+                                Номер телефона
+                            </div>
+                            <div class="contact-block__link">
+                                +79528885982
+                            </div>
+                        </div>
+                        <div class="contact-block__item">
+                            <div class="contact-block__subtitle">
+                                Email
+                            </div>
+                            <div class="contact-block__link">
+                                gamora.gamora02@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-block__image">
+                    <img src="{% static 'img/portrait.jpeg' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+            <div class="section__title-wrapper section__title-wrapper--sub">
+                <h2 class="section__title section__title--sub">Сотрудники</h2>
+
+                <a class="news__link" href="{% url 'news_list' %}">Все сотрудники</a>
+            </div>
+
+            <div class="employees-list">
+
+                <div class="employees__item">
+                    <div class="employees__image">
+                        <img src="{% static 'img/portrait.jpeg' %}">
+                    </div>
+                    <div class="employees__text">
+                        <p class="employees__title">Хасанов Амир Шерзодович</p>
+                        <span class="employees__position">4К ммр псих монстр </span>
+                    </div>
+                </div>
+
+                <div class="employees__item">
+                    <div class="employees__image">
+                        <img src="{% static 'img/portrait.jpeg' %}">
+                    </div>
+                    <div class="employees__text">
+                        <p class="employees__title">Хасанов Амир Шерзодович</p>
+                        <span class="employees__position">4К ммр псих монстр </span>
+                    </div>
+                </div>
+
+                <div class="employees__item">
+                    <div class="employees__image">
+                        <img src="{% static 'img/portrait.jpeg' %}">
+                    </div>
+                    <div class="employees__text">
+                        <p class="employees__title">Хасанов Амир Шерзодович</p>
+                        <span class="employees__position">4К ммр псих монстр </span>
+                    </div>
+                </div>
+
+                <div class="employees__item">
+                    <div class="employees__image">
+                        <img src="{% static 'img/portrait.jpeg' %}">
+                    </div>
+                    <div class="employees__text">
+                        <p class="employees__title">Хасанов Амир Шерзодович</p>
+                        <span class="employees__position">4К ммр псих монстр </span>
+                    </div>
+                </div>
+
+                <div class="employees__item">
+                    <div class="employees__image">
+                        <img src="{% static 'img/portrait.jpeg' %}">
+                    </div>
+                    <div class="employees__text">
+                        <p class="employees__title">Хасанов Амир Шерзодович</p>
+                        <span class="employees__position">4К ммр псих монстр </span>
+                    </div>
+                </div>
+
+                <div class="employees__item">
+                    <div class="employees__image">
+                        <img src="{% static 'img/portrait.jpeg' %}">
+                    </div>
+                    <div class="employees__text">
+                        <p class="employees__title">Хасанов Амир Шерзодович</p>
+                        <span class="employees__position">4К ммр псих монстр </span>
+                    </div>
+                </div>
+
+            </div>
+    
+
+
+        </div>
+    </section>
+
+
+
+
+
+</main>
+{% endblock %}

@@ -48,9 +48,11 @@
                 </div>
 
                 <div class="nav__btns-wrapper">
-                    <a class="btn-reset btn nav__btn nav__btn--icon" href="{{ schedule.file.url }}" target="_blank" aria-label="Открыть расписание" >
-                        <img loading="lazy" src="{% static 'img/nav/calendar-light.svg' %}" width="30" height="21" alt="" aria-hidden="true">
-                    </a>
+                    {% if schedule %}
+                        <a class="btn-reset btn nav__btn nav__btn--icon" href="{{ schedule.file.url }}" target="_blank" aria-label="Открыть расписание" >
+                            <img loading="lazy" src="{% static 'img/nav/calendar-light.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+                        </a>
+                    {% endif %}
                     <a class="btn-reset btn nav__btn nav__btn--icon" aria-label="Сменить язык" >
                         <img loading="lazy" src="{% static 'img/header/header-lang.svg' %}" width="30" height="21" alt="" aria-hidden="true">
                     </a>

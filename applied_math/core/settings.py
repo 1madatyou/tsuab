@@ -24,7 +24,8 @@ INSTALLED_APPS = [
     'support',
     'users',
     'theses',
-    'schedule'
+    'schedule',
+    'contacts'
 ]
 
 MIDDLEWARE = [
