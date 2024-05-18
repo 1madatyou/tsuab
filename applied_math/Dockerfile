@@ -1,6 +1,13 @@
 # Установка базового образа
 FROM python:3.11-bullseye
 
+
+RUN apt-get update && apt-get install -y locales-all
+RUN apt-get update && apt-get install -y locales
+
+RUN locale-gen ru_RU.UTF-8
+RUN dpkg-reconfigure locales
+
 # Установка переменной окружения PYTHONUNBUFFERED в значение 1,
 # чтобы вывод команд Python был сразу доступен в консоли
 ENV PYTHONUNBUFFERED=1
