@@ -5,8 +5,10 @@ from .models import Schedule
 @admin.register(Schedule)
 class ScheduleAdmin(admin.ModelAdmin):
 
+    actions = None
+
     def has_add_permission(self, request):
-        return False
+        if Schedule.objects.exists():
+            return False
+        return True
     
-    def has_delete_permission(self, request, obj=None):
-        return False

@@ -85,9 +85,13 @@
     <footer class="footer">
         <div class="container footer__content">
             <div class="footer-btns">
-                <a class="btn-reset footer__btn" href="{{ schedule.file.url }}" target="_blank" aria-label="Открыть расписание" >
-                    <img loading="lazy" src="{% static 'img/nav/calendar-light.svg' %}" width="30" height="21" alt="" aria-hidden="true">
-                </a>
+                {% if schedule %}
+                
+                    <a class="btn-reset footer__btn" href="{{ schedule.file.url }}" target="_blank" aria-label="Открыть расписание" >
+                        <img loading="lazy" src="{% static 'img/nav/calendar-light.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+                    </a>
+
+                {% endif %}
                 <button class="btn-reset footer__btn" href="#"">
                     <img loading="lazy" src="{% static 'img/header/header-lang.svg' %}" width="30" height="21" alt="" aria-hidden="true">
                 </button>
