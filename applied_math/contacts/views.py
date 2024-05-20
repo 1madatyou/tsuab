@@ -9,8 +9,14 @@ class Contacts(generic.TemplateView):
 
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
+
+        try:
+            main_employee = Employee.objects.get(is_main=True)
+        except Employee.DoesNotExist:
+            main_employee = Employee.objects.last()
+
         context.update({
-            'main_employee': Employee.objects.get(is_main=True),
+            'main_employee': main_employee,
             'last_employees': Employee.objects.all()[:6]
         })
         return context
