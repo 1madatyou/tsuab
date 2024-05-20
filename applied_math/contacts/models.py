@@ -11,5 +11,28 @@ class Employee(models.Model):
 
     class Meta:
         verbose_name = 'Сотрудник'
-        verbose_name = 'Сотрудники'
+        verbose_name_plural = 'Сотрудники'
+
+    def get_full_name(self):
+        """Возвращает ФИО сотрудника"""
+        return f'{self.surname} {self.name} {self.patronymic}'
+    
+    def __str__(self):
+        return self.get_full_name()
+    
+
+class EmployeeContact(models.Model):
+    """Модель контактов сотрудника"""
+    employee = models.ForeignKey(
+        verbose_name="Контакты", 
+        to='contacts.Employee', 
+        on_delete=models.CASCADE,
+        related_name='contacts'
+    )
+    title = models.CharField(verbose_name="Тип", max_length=255)
+    value = models.CharField(verbose_name="Значение", max_length=255)
+
+    class Meta:
+        verbose_name = 'Контакты'
+        verbose_name_plural = 'Контакты'
 
