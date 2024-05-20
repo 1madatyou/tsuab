@@ -8,6 +8,7 @@ class Employee(models.Model):
     patronymic = models.CharField(verbose_name="Отчество", max_length=255)
     position = models.TextField(verbose_name="Должность")
     image = models.FileField(verbose_name="Изображение", upload_to='employees/', null=True, blank=True)
+    is_main = models.BooleanField(default=0)
 
     class Meta:
         verbose_name = 'Сотрудник'
@@ -16,6 +17,10 @@ class Employee(models.Model):
     def get_full_name(self):
         """Возвращает ФИО сотрудника"""
         return f'{self.surname} {self.name} {self.patronymic}'
+    
+    def set_main(self):
+        """Назначает сотрудника главным и отображает его первым на странице 'контакты'"""
+        pass
     
     def __str__(self):
         return self.get_full_name()
@@ -33,6 +38,6 @@ class EmployeeContact(models.Model):
     value = models.CharField(verbose_name="Значение", max_length=255)
 
     class Meta:
-        verbose_name = 'Контакты'
-        verbose_name_plural = 'Контакты'
+        verbose_name = 'Контакт'
+        verbose_name_plural = 'Контакты сотрудника'
 
