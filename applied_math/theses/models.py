@@ -8,8 +8,8 @@ class DiplomaThesis(models.Model):
     date_upload = models.DateTimeField(verbose_name="Дата загрузки", auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = "Дипломные работы"
-        verbose_name = "Дипломная работа"
+        verbose_name_plural = "дипломные работы"
+        verbose_name = "дипломная работа"
 
     def get_formatted_date_upload(self):
         return self.date_upload.strftime('%d.%m.%Y')

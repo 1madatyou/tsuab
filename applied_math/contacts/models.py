@@ -11,8 +11,8 @@ class Employee(models.Model):
     is_main = models.BooleanField(default=0)
 
     class Meta:
-        verbose_name = 'Сотрудник'
-        verbose_name_plural = 'Сотрудники'
+        verbose_name = 'cотрудник'
+        verbose_name_plural = 'cотрудники'
 
     def get_full_name(self):
         """Возвращает ФИО сотрудника"""
@@ -38,6 +38,9 @@ class EmployeeContact(models.Model):
     value = models.CharField(verbose_name="Значение", max_length=255)
 
     class Meta:
-        verbose_name = 'Контакт'
-        verbose_name_plural = 'Контакты сотрудника'
+        verbose_name = 'контакт'
+        verbose_name_plural = 'контакты сотрудника'
+
+    def __str__(self):
+        return ''
 

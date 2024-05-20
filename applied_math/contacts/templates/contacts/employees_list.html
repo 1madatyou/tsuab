@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="main">
+
+    <section class="section">
+        <div class="container">
+            
+            <div class="section__title-wrapper section__title-wrapper--sub">
+                <h1 class="section__title">Все сотрудники</h1>
+            </div>
+
+            <div class="employees-list">
+
+                {% for e in employees %}
+
+                    <a class="employees__item" href="{% url 'employees-detail' e.pk %}">
+                        <div class="employees__image">
+                            <img src="{{ e.image.url }}">
+                        </div>
+                        <div class="employees__text">
+                            <p class="employees__title">{{ e.get_full_name }}</p>
+                            <span class="employees__position"> {{ e.position }} </span>
+                        </div>
+                    </a>
+
+                {% endfor %}
+
+            </div>
+    
+
+
+        </div>
+    </section>
+
+
+
+
+
+</main>
+{% endblock %}

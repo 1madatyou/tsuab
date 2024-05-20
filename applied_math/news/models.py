@@ -19,8 +19,8 @@ class News(models.Model):
         return self.date_created.strftime("%d.%m.%Y")
 
     class Meta:
-        verbose_name = "Новость"
-        verbose_name_plural = "Новости"
+        verbose_name = "новость"
+        verbose_name_plural = "новости"
         ordering = ['-id']
 
 
@@ -33,8 +33,8 @@ class NewsPicture(models.Model):
         return "Изображение новости"
 
     class Meta:
-        verbose_name = "Изображение"
-        verbose_name_plural = "Изображения"
+        verbose_name = "иображение"
+        verbose_name_plural = "изображения"
 
 
 

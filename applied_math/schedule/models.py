@@ -10,7 +10,7 @@ class Schedule(models.Model):
         return 'Расписание'
 
     class Meta:
-        verbose_name = "Расписание"
-        verbose_name_plural = "Расписание"
+        verbose_name = "расписание"
+        verbose_name_plural = "расписание"
 
         
