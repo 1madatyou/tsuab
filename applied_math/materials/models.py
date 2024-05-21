@@ -34,4 +34,4 @@ class Manual(models.Model):
         return self.date_upload.strftime('%d.%m.%Y')
     
     def get_formatted_author_full_name(self):
-        return f'{self.author_surname} {self.author_name}.{self.author_patronymic}'
+        return f'{self.author_surname} {self.author_name[0]}.{self.author_patronymic[0]}'

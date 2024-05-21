@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+
+{% block content %}
+  <main class="main">
+    <section class="section">
+  <div class="container">
+  <div class="section__title-wrapper">
+    <h2 class="section__title">Методические указания</h2>
+  </div>
+
+  <div class="file-item__list">
+    {% for m in manuals %}
+      <div class="file-item">
+        <div class="file-item__content-wrapper">
+          <div class="file-item__title-wrapper">
+            <div class="file-item__title">
+              {{ m.title }}
+            </div>
+            <div class="file-item__subtitle">
+              {{ m.get_formatted_author_full_name }}
+            </div>
+          </div>
+          <div class="file-item__file-wrapper">
+            <div class="file-item__date">
+              {{ m.get_formatted_date_upload }}
+            </div>
+            <a class="file-item__file" href="{{ m.file.url }}" target="_blank" ></a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    
+  </div>
+
+  {% include 'includes/pagination.html' %}
+  </div>
+  </section>
+
+  </main>
+{% endblock %}

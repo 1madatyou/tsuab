@@ -12,16 +12,16 @@
 
   <div class="file-item__list">
     {% for t in theses %}
-      <div class="file__item">
-        <div class="file__item__content-wrapper">
-          <div class="file__item__title">
+      <div class="file-item">
+        <div class="file-item__content-wrapper">
+          <div class="file-item__title">
             {{t.title}}
           </div>
-          <div class="file__item__file-wrapper">
-            <div class="file__item__date">
+          <div class="file-item__file-wrapper">
+            <div class="file-item__date">
               {{ t.get_formatted_date_upload }}
             </div>
-            <a class="file__item__file" href="{{ t.file.url }}" target="_blank" ></a>
+            <a class="file-item__file" href="{{ t.file.url }}" target="_blank" ></a>
           </div>
         </div>
       </div>

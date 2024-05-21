@@ -627,7 +627,7 @@ a {
   margin-bottom: 60px;
 }
 
-.file__item {
+.file-item {
   padding: 25px;
   border-radius: 5px;
   width: 400px;
@@ -637,51 +637,59 @@ a {
   transition: transform 0.3s ease; /* добавляем анимацию при наведении */
 }
 
-.file__item:hover {
+.file-item:hover {
   transform: translateY(-5px); /* поднимаем элемент при наведении */
 }
 
-.file__item__content-wrapper {
+.file-item__content-wrapper {
   display: flex;
   height: 100%;
   justify-content: space-between;
   flex-direction: column;
 }
 
-.file__item__title {
+.file-item__title {
   font-size: 20px;
   font-weight: 700;
   color: var(--dark-color); /* меняем цвет текста */
   font-family: Arial, sans-serif; /* выбираем другой шрифт */
 }
 
-.file__item__date {
+.file-item__subtitle {
   font-size: 17px;
+  font-weight: 100;
+  margin-top: 5px;
+  color: var(--dark-color); /* меняем цвет текста */
+  font-family: Arial, sans-serif; /* выбираем другой шрифт */
+}
+
+.file-item__date {
+  font-size: 13px;
   font-weight: 500;
   color: var(--dark-color); /* меняем цвет текста */
   font-family: Arial, sans-serif; /* выбираем другой шрифт */
 }
 
-.file__item__file-wrapper {
+.file-item__file-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.file__item__file {
+.file-item__file {
   display: flex; 
   gap: 2px;
   font-size: 18px;
   color: var(--blue-color); /
 }
 
-.file__item__file::after {
+.file-item__file::after {
   content: url("../img/theses/open.svg");
   align-items: center;
   position: relative;
 }
 
 /* Пример анимации при наведении на кнопку "Скачать" */
-.file__item__file:hover {
+.file-item__file:hover {
   color: var(--blue-color-light); /* меняем цвет текста при наведении */
   cursor: pointer; /* меняем курсор на указатель */
 }
