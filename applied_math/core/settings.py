@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'home',
     'support',
     'users',
-    'theses',
+    'materials',
     'schedule',
     'contacts'
 ]
