@@ -11,33 +11,29 @@
                 <h1 class="section__title">Контакты</h1>
             </div>
 
-            {% if main_employee %}
-
-                <div class="contact-block">
-                    <div class="contact-block__info">
-                        <p class="contact-block__title">
-                            {{ main_employee.get_full_name }}
-                        </p>
-                        <span class="contact-block__position">{{ main_employee.position }}</span>
-                        <div class="contact-block__items">
-                            {% for c in main_employee.contacts.all %}
-                                <div class="contact-block__item">
-                                    <div class="contact-block__subtitle">
-                                        {{ c.title }}
-                                    </div>
-                                    <div class="contact-block__link">
-                                        {{ c.value }}
-                                    </div>
+            <div class="contact-block">
+                <div class="contact-block__info">
+                    <p class="contact-block__title">
+                        {{ main_employee.get_full_name }}
+                    </p>
+                    <span class="contact-block__position">{{ main_employee.position }}</span>
+                    <div class="contact-block__items">
+                        {% for c in main_employee.contacts.all %}
+                            <div class="contact-block__item">
+                                <div class="contact-block__subtitle">
+                                    {{ c.title }}
                                 </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="contact-block__image">
-                        <img src="{{ main_employee.image.url }}" alt="">
+                                <div class="contact-block__link">
+                                    {{ c.value }}
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
-
-            {% endif %}
+                <div class="contact-block__image">
+                    <img src="{{ main_employee.image.url }}" alt="">
+                </div>
+            </div>
 
         </div>
     </section>

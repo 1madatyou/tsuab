@@ -10,18 +10,18 @@
     <h2 class="section__title">Дипломные работы</h2>
   </div>
 
-  <div class="theses-list">
+  <div class="file-item__list">
     {% for t in theses %}
-      <div class="theses-item">
-        <div class="theses-item__content-wrapper">
-          <div class="theses-item__title">
+      <div class="file__item">
+        <div class="file__item__content-wrapper">
+          <div class="file__item__title">
             {{t.title}}
           </div>
-          <div class="theses-item__file-wrapper">
-            <div class="theses-item__date">
+          <div class="file__item__file-wrapper">
+            <div class="file__item__date">
               {{ t.get_formatted_date_upload }}
             </div>
-            <a class="theses-item__file" href="{{ t.file.url }}" target="_blank" ></a>
+            <a class="file__item__file" href="{{ t.file.url }}" target="_blank" ></a>
           </div>
         </div>
       </div>
