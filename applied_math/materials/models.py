@@ -14,6 +14,11 @@ class DiplomaThesis(models.Model):
     def get_formatted_date_upload(self):
         return self.date_upload.strftime('%d.%m.%Y')
     
+    def __str__(self):
+        return self.title
+    
+    
+    
 
 class Manual(models.Model):
     """Модель методического указания"""
@@ -35,3 +40,6 @@ class Manual(models.Model):
     
     def get_formatted_author_full_name(self):
         return f'{self.author_surname} {self.author_name[0]}.{self.author_patronymic[0]}'
+    
+    def __str__(self):
+        return self.title
