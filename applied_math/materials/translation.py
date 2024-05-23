@@ -1,7 +1,6 @@
 from modeltranslation.translator import register, TranslationOptions
 
-from materials.models import Manual, DiplomaThesis
-from news.models import News
+from .models import Manual, DiplomaThesis
 
 
 @register(Manual)
@@ -12,8 +11,3 @@ class ManualTranslationOptions(TranslationOptions):
 @register(DiplomaThesis)
 class DiplomaThesisTranslationOptions(TranslationOptions):
     fields = ['title']
-
-
-@register(News)
-class NewsTranslationOptions(TranslationOptions):
-    fields = ['title', 'text']
