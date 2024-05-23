@@ -101,6 +101,9 @@ LANGUAGES = (
     ('en', gettext('English')),
 )
 
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 MEDIA_URL = 'media/'
 

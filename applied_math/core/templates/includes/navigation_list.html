@@ -1,33 +1,36 @@
+{% load i18n %}
+
+
 <ul class="list-reset nav__list">
     <li class="nav__item">
-        <a class="nav__link" href="{% url 'home' %}">Главная</a>
+        <a class="nav__link" href="{% url 'home' %}">{% trans 'Главная' %}</a>
     </li>
     <li class="nav__item">
         <div class="dropdown">
-            <a class="nav__link">О кафедре</a>
+            <a class="nav__link">{% trans 'О кафедре' %}</a>
             <div class="dropdown-content">
-                <a class="nav__link" href="#" >История</a>
+                <a class="nav__link" href="#" >{% trans 'История' %}</a>
 
             </div>
         </div>
     </li>
     <li class="nav__item">
-        <a class="nav__link" href="{% url 'news_list' %}">Новости</a>
+        <a class="nav__link" href="{% url 'news_list' %}">{% trans 'Новости' %}</a>
     </li>
     <li class="nav__item">
         <div class="dropdown">
-            <a class="nav__link">Студентам</a>
+            <a class="nav__link">{% trans 'Студентам' %}</a>
             <div class="dropdown-content">
-                <a class="nav__link" href="{% url 'theses_list' %}">Дипломные работы</a>
-                <a class="nav__link" href="#">Расписание</a>
-                <a class="nav__link" href="{% url 'manuals_list' %}">Методические указания</a>
+                <a class="nav__link" href="{% url 'theses_list' %}">{% trans 'Дипломные работы' %}</a>
+                <a class="nav__link" href="#">{% trans 'Расписание' %}</a>
+                <a class="nav__link" href="{% url 'manuals_list' %}">{% trans 'Методические указания' %}</a>
             </div>
         </div>
     </li>
     <li class="nav__item">
-        <a class="nav__link" href="{% url 'contacts' %}">Контакты</a>
+        <a class="nav__link" href="{% url 'contacts' %}">{% trans 'Контакты' %}</a>
     </li>
     <li class="nav__item">
-        <a class="nav__link" href="{% url 'support' %}">Помощь</a>
+        <a class="nav__link" href="{% url 'support' %}">{% trans 'Помощь' %}</a>
     </li>
 </ul>

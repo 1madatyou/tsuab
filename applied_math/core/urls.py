@@ -14,13 +14,13 @@ admin.site.site_header = "Администрирование"
 admin.site.index_title = "Кафедра прикладной математики"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
 
 
 ]
 
 urlpatterns += i18n_patterns(
+    path('admin/', admin.site.urls),
     path('home/', include('home.urls')),
     path('support/', include('support.urls')),
     path('news/', include('news.urls')),

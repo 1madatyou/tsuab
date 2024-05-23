@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-23 14:48+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: core/templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr ""
+
+#: core/templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "Администрирование"
+
+#: core/templates/includes/navigation_list.html:6
+msgid "Главная"
+msgstr "Home"
+
+#: core/templates/includes/navigation_list.html:10
+msgid "О кафедре"
+msgstr "About"
+
+#: core/templates/includes/navigation_list.html:12
+msgid "История"
+msgstr "History"
+
+#: core/templates/includes/navigation_list.html:18
+msgid "Новости"
+msgstr "News"
+
+#: core/templates/includes/navigation_list.html:22
+msgid "Студентам"
+msgstr "For students"
+
+#: core/templates/includes/navigation_list.html:24
+msgid "Дипломные работы"
+msgstr "Theses"
+
+#: core/templates/includes/navigation_list.html:25
+msgid "Расписание"
+msgstr "Schedule"
+
+#: core/templates/includes/navigation_list.html:26
+msgid "Методические указания"
+msgstr "Manuals"
+
+#: core/templates/includes/navigation_list.html:31
+msgid "Контакты"
+msgstr "Contacts"
+
+#: core/templates/includes/navigation_list.html:34
+msgid "Помощь"
+msgstr "Support"
