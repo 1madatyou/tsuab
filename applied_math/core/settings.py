@@ -94,6 +94,13 @@ USE_I18N = True
 
 USE_TZ = True
 
+gettext = lambda s: s
+
+LANGUAGES = (
+    ('ru', gettext('Russia')),
+    ('en', gettext('English'))
+)
+
 
 MEDIA_URL = 'media/'
 

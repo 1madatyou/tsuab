@@ -19,7 +19,6 @@ class DiplomaThesis(models.Model):
     
     
     
-
 class Manual(models.Model):
     """Модель методического указания"""
     title = models.CharField(verbose_name="Тема", max_length=255)
