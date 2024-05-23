@@ -1,6 +1,8 @@
-import admin_thumbnails
 
 from django.contrib import admin
+
+from modeltranslation.admin import TranslationAdmin
+import admin_thumbnails
 
 from .models import News, NewsPicture
 
@@ -11,7 +13,7 @@ class NewsPictureInline(admin.TabularInline):
 
 
 @admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(TranslationAdmin):
     inlines = [
         NewsPictureInline,
     ]
