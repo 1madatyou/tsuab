@@ -200,6 +200,43 @@ a {
   gap: 15px;
 }
 
+.nav__dropdown {
+  position: relative;
+}
+
+.nav__dropdown:hover .nav__dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__dropdown .nav__btn {
+  height: 100%;
+}
+
+.nav__dropdown-list {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 3px;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+.nav__dropdown-item {}
+
+.nav__btn {}
+
+.nav__btn--icon {}
+
+
+
 .nav__btn {
   border-radius: 10px;
   padding: 12px 25px;
@@ -276,19 +313,22 @@ a {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Важно для вертикального выравнивания на мобильных телефонах */
-  margin: 0; /* Важно для вертикального выравнивания на мобильных телефонах */
+  font-family: inherit;
+  /* Важно для вертикального выравнивания на мобильных телефонах */
+  margin: 0;
+  /* Важно для вертикального выравнивания на мобильных телефонах */
 }
 
 /* Выпадающее содержимое (скрыто по умолчанию) */
 .dropdown-content {
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   background-color: var(--blue-color);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   z-index: 4;
-  
+
 }
 
 /* Ссылки внутри выпадающего списка */
@@ -312,6 +352,7 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
+  visibility: visible;
   transition: 0.5s all;
 }
 
@@ -633,12 +674,15 @@ a {
   width: 400px;
   height: 200px;
   background-color: var(--light-main-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* добавляем тень */
-  transition: transform 0.3s ease; /* добавляем анимацию при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* добавляем тень */
+  transition: transform 0.3s ease;
+  /* добавляем анимацию при наведении */
 }
 
 .file-item:hover {
-  transform: translateY(-5px); /* поднимаем элемент при наведении */
+  transform: translateY(-5px);
+  /* поднимаем элемент при наведении */
 }
 
 .file-item__content-wrapper {
@@ -651,23 +695,29 @@ a {
 .file-item__title {
   font-size: 20px;
   font-weight: 700;
-  color: var(--dark-color); /* меняем цвет текста */
-  font-family: Arial, sans-serif; /* выбираем другой шрифт */
+  color: var(--dark-color);
+  /* меняем цвет текста */
+  font-family: Arial, sans-serif;
+  /* выбираем другой шрифт */
 }
 
 .file-item__subtitle {
   font-size: 17px;
   font-weight: 100;
   margin-top: 5px;
-  color: var(--dark-color); /* меняем цвет текста */
-  font-family: Arial, sans-serif; /* выбираем другой шрифт */
+  color: var(--dark-color);
+  /* меняем цвет текста */
+  font-family: Arial, sans-serif;
+  /* выбираем другой шрифт */
 }
 
 .file-item__date {
   font-size: 13px;
   font-weight: 500;
-  color: var(--dark-color); /* меняем цвет текста */
-  font-family: Arial, sans-serif; /* выбираем другой шрифт */
+  color: var(--dark-color);
+  /* меняем цвет текста */
+  font-family: Arial, sans-serif;
+  /* выбираем другой шрифт */
 }
 
 .file-item__file-wrapper {
@@ -676,10 +726,10 @@ a {
 }
 
 .file-item__file {
-  display: flex; 
+  display: flex;
   gap: 2px;
   font-size: 18px;
-  color: var(--blue-color); /
+  color: var(--blue-color);/
 }
 
 .file-item__file::after {
@@ -690,8 +740,10 @@ a {
 
 /* Пример анимации при наведении на кнопку "Скачать" */
 .file-item__file:hover {
-  color: var(--blue-color-light); /* меняем цвет текста при наведении */
-  cursor: pointer; /* меняем курсор на указатель */
+  color: var(--blue-color-light);
+  /* меняем цвет текста при наведении */
+  cursor: pointer;
+  /* меняем курсор на указатель */
 }
 
 .contact-block {
@@ -844,6 +896,7 @@ a {
   color: var(--main-color);
   opacity: 1;
 }
+
 /* 
 .pagination-arrow--prev::after {
   color: var(--main-color);

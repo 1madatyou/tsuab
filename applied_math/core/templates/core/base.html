@@ -50,20 +50,37 @@
                 </div>
 
                 <div class="nav__btns-wrapper">
+                    <a class="btn-reset btn nav__btn nav__btn--icon" target="_blank" aria-label="Открыть расписание" >
+                        <img loading="lazy" src="{% static 'img/nav/calendar-light.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+                    </a>
                     {% if schedule %}
                         <a class="btn-reset btn nav__btn nav__btn--icon" href="{{ schedule.file.url }}" target="_blank" aria-label="Открыть расписание" >
                             <img loading="lazy" src="{% static 'img/nav/calendar-light.svg' %}" width="30" height="21" alt="" aria-hidden="true">
                         </a>
                     {% endif %}
-                    <div class="dropdown dropdown--arrow-none">
-                        <a class="btn-reset btn nav__btn nav__btn--icon" aria-label="Сменить язык" >
-                            <img loading="lazy" src="{% static 'img/lang/lang-ru.svg' %}" width="30" height="21" alt="" aria-hidden="true">
-                        </a>
-                        <div class="dropdown-content">
-                            <a class="nav__link" href="{% url 'theses_list' %}">{% trans 'Дипломные работы' %}</a>
-                            <a class="nav__link" href="#">{% trans 'Расписание' %}</a>
-                            <a class="nav__link" href="{% url 'manuals_list' %}">{% trans 'Методические указания' %}</a>
-                        </div>
+                    <div class="nav__dropdown">
+
+                        <form class="nav__dropdown-form" action="{% url 'set_language' %}" method="post"> {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+
+                            <button class="btn-reset btn nav__btn nav__btn--icon" aria-label="Сменить язык" type="button">
+                                <img loading="lazy" src="{% static 'img/lang/lang-ru.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+                            </button>
+    
+                            <ul class="list-reset nav__dropdown-list">
+                                <li class="nav__dropdown-item">
+                                    <button class="btn-reset btn nav__btn nav__dropdown-submit nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="en">
+                                        <img loading="lazy" src="{% static 'img/lang/lang-uk.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+                                    </button>
+                                </li>
+                                <li class="nav__dropdown-item">
+                                    <button class="btn-reset btn nav__btn nav__dropdown-submit nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="ru">
+                                        <img loading="lazy" src="{% static 'img/lang/lang-ru.svg' %}" width="30" height="21" alt="" aria-hidden="true">
+                                    </button>
+                                </li>
+                            </ul>
+                        </form>
+
                     </div>
 
                     <a class="btn-reset btn nav__btn nav__btn--icon" id="specialButton" aria-label="Включить версию для слабовидящих">
@@ -72,7 +89,9 @@
                         <path d="M17 18C19.7614 18 22 15.7614 22 13C22 10.2386 19.7614 8 17 8C14.2386 8 12 10.2386 12 13C12 15.7614 14.2386 18 17 18Z" fill="currentcolor"/>
                         </svg>
                     </a>
-                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+
+
+                    <!-- <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
                         <input name="next" type="hidden" value="{{ redirect_to }}">
                         <select name="language">
                             {% get_current_language as LANGUAGE_CODE %}
@@ -86,7 +105,9 @@
                             {% endfor %}
                         </select>
                         <input type="submit" value="Go">
-                    </form>
+                    </form> -->
+
+                    
                 </div>
             </div>
             </div>

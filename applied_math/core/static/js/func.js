@@ -26,5 +26,18 @@ function toggleVisuallyImpairedMode() {
     }
 }
 
-togglePasswordVisibility()
-toggleVisuallyImpairedMode()
+window.addEventListener('DOMContentLoaded', () => {
+    togglePasswordVisibility();
+    toggleVisuallyImpairedMode();
+
+    // nav form
+    const navForm = document.querySelector('.nav__dropdown-form');
+    const btnsSubmit = navForm.querySelectorAll('.nav__dropdown-submit');
+    const inputLang = navForm.querySelector('[name="language"]');
+
+    btnsSubmit.forEach(item => {
+        item.addEventListener('click', (e) => {
+            navForm.submit();
+        });
+    });
+});
