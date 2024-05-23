@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns
 
 
 from .views import home_redirect
@@ -9,10 +10,17 @@ from .views import home_redirect
 
 handler404 = 'core.views.handler404'
 
+admin.site.site_header = "Администрирование"
+admin.site.index_title = "Кафедра прикладной математики"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
 
+
+]
+
+urlpatterns += i18n_patterns(
     path('home/', include('home.urls')),
     path('support/', include('support.urls')),
     path('news/', include('news.urls')),
@@ -21,11 +29,9 @@ urlpatterns = [
     
     path('', home_redirect),
     path('', include('users.urls')),
+)
 
-]
 
-admin.site.site_header = "Администрирование"
-admin.site.index_title = "Кафедра прикладной математики"
 
 
 
