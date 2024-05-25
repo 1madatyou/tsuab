@@ -1,21 +1,21 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
-
 <main class="main">
   <section class="section">
 <div class="container">
 <div class="form-wrapper">
-  <h2 class="form__title">Авторизация</h2>
+  <h2 class="form__title">{% trans 'Авторизация' %}</h2>
 
   <form class="sign-in__form" method="post"> {% csrf_token %}
     <div class="form-inputs">
       <label class="form__label form__label--email">
-        <input class="form__input" name="email" type="text" placeholder="Введите адрес электронной почты">
+        <input class="form__input" name="email" type="text" placeholder="{% trans 'Введите адрес электронной почты' %}">
       </label>
       <label class="form__label form__label--password">
-        <input class="form__input" name="password" type="password" placeholder="Введите пароль">
+        <input class="form__input" name="password" type="password" placeholder="{% trans 'Введите пароль' %}">
         <button class="toggle-eye" type="button"></button>
 
       </label>
@@ -27,13 +27,13 @@
 
         {% endif %}
       </div>
-      <h3 class="form__subtitle">Дополнительно</h3>
+      <h3 class="form__subtitle">{% trans 'Дополнительно' %}</h3>
       <div class="form-links">
-        <a href="{% url 'sign_up' %}" class="form__link">Регистрация</a>
-        <a href="{% url 'reset_password' %}" class="form__link">Забыли пароль?</a>
+        <a href="{% url 'sign_up' %}" class="form__link">{% trans 'Регистрация' %}</a>
+        <a href="{% url 'reset_password' %}" class="form__link">{% trans 'Забыли пароль?' %}</a>
       </div>
     </div>
-    <button class="btn-reset sign-in__btn" type="submit">Вход</button>
+    <button class="btn-reset sign-in__btn" type="submit">{% trans 'Вход' %}</button>
   </form>
 </div>
 </div>

@@ -1,53 +1,53 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
-
 <main class="main">
   <section class="section">
 <div class="container">
 <div class="form-wrapper">
-  <h2 class="form__title">Регистрация</h2>
+  <h2 class="form__title">{% trans 'Регистрация' %}</h2>
 
   <form class="sign-in__form" method="POST"> {% csrf_token %}
     <div class="form-inputs"> 
 
       <label class="form__label form__label--user">
-        <input class="form__input" name="surname" type="text" placeholder="Введите фамилию">
+        <input class="form__input" name="surname" type="text" placeholder="{% trans 'Введите фамилию' %}">
       </label>
 
       <label class="form__label form__label--user">
-        <input class="form__input" name="name" type="text" placeholder="Введите имя">
+        <input class="form__input" name="name" type="text" placeholder="{% trans 'Введите имя' %}">
       </label>
 
       <label class="form__label form__label--user">
-        <input class="form__input" name="patronymic" type="text" placeholder="Введите отчество">
+        <input class="form__input" name="patronymic" type="text" placeholder="{% trans 'Введите отчество' %}">
       </label>
 
       <label class="form__label form__label--email">
-        <input class="form__input" name="email" autocomplete="off" type="text" placeholder="Введите адрес электронной почты">
+        <input class="form__input" name="email" autocomplete="off" type="text" placeholder="{% trans 'Введите адрес электронной почты' %}">
       </label>
       {{ form_errors.email }}
 
       <label class="form__label form__label--password">
-        <input class="form__input" name="password" autocomplete="off" type="password" placeholder="Введите пароль">
+        <input class="form__input" name="password" autocomplete="off" type="password" placeholder="{% trans 'Введите пароль' %}">
         <button class="toggle-eye" type="button"></button>
       </label>
       {{ form_errors.password}}
 
       <label class="form__label form__label--password">
-        <input class="form__input" name="repeat_password" type="password" placeholder="Повторите пароль">
+        <input class="form__input" name="repeat_password" type="password" placeholder="{% trans 'Повторите пароль' %}">
         <button class="toggle-eye" type="button"></button>
       </label>
       {{ form_errors.repeat_password }}
 
-      <h3 class="form__subtitle">Уже зарегистрированы?</h3>
+      <h3 class="form__subtitle">{% trans 'Уже зарегистрированы?' %}</h3>
       <div class="form-links">
-        <a href="{% url 'sign_in' %}" class="form__link">Вход</a>
-        <a href="{% url 'reset_password' %}" class="form__link">Забыли пароль?</a>
+        <a href="{% url 'sign_in' %}" class="form__link">{% trans 'Вход' %}</a>
+        <a href="{% url 'reset_password' %}" class="form__link">{% trans 'Забыли пароль?' %}</a>
       </div>
     </div>
-    <button class="btn-reset sign-in__btn" type="submit">Зарегистрироваться</button>
+    <button class="btn-reset sign-in__btn" type="submit">{% trans 'Зарегистрироваться' %}</button>
   </form>
 </div>
 </div>

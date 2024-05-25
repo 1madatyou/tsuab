@@ -1,27 +1,21 @@
 import locale
 
+from django.template.defaultfilters import date as _date
 from django.utils import timezone
+from django.utils import translation
+from django.utils.translation import gettext_lazy as _
 
-
-locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
 
 
 def get_date_context(request):
     """Возвращает контекст с отформатированной сегодняшней датой"""
-    
-    today_datetime_data = []
-
-    today_datetime_data.append(timezone.datetime.now().strftime("%d %B %Y")) 
-
-    if timezone.datetime.now().isocalendar()[1] % 2:
-        today_datetime_data.append('нечётная неделя')
-    else:
-        today_datetime_data.append('чётная неделя') 
-
-    result = (', ').join(today_datetime_data)
+    week_type = _('чётная неделя') if timezone.datetime.now().isocalendar()[1] % 2 else _('нечётная неделя')
+    today_datetime = _date(timezone.datetime.now() , "d E Y")
 
     context = {}
-    context.update({'today_formatted': result})
+    context.update(
+        {'week_type': week_type,
+         'today_datetime': today_datetime})
 
     return context
 

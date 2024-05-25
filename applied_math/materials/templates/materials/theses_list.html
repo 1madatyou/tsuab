@@ -1,5 +1,6 @@
 {% extends "core/base.html" %}
 {% load static %}
+{% load i18n %}
 
 
 {% block content %}
@@ -7,7 +8,7 @@
     <section class="section">
   <div class="container">
   <div class="section__title-wrapper">
-    <h2 class="section__title">Дипломные работы</h2>
+    <h2 class="section__title">{% trans 'Дипломные работы' %}</h2>
   </div>
 
   <div class="file-item__list">

@@ -1,18 +1,19 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% load i18n %}
+
 
 {% block content %}
-
 <main class="main">
   <section class="section">
 <div class="container">
    <div class="message-wrapper">
         <div class="message__title">
-            Обращение отправлено
+            {% trans 'Обращение отправлено' %}
         </div>
         <hr class="message__line">
         <div class="message">
-            <div>Ответ придет на ваш электронный адрес после рассмотрения</div>
+            <div>{% trans 'Ответ придет на ваш электронный адрес после рассмотрения' %}</div>
         </div>
    </div>
 </div>

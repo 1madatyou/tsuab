@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-23 14:48+0700\n"
+"POT-Creation-Date: 2024-05-25 11:44+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "нечётная неделя"
+msgstr "odd week"
+
+msgid "чётная неделя"
+msgstr "even week"
+
+#: contacts/templates/contacts/contacts.html:12
+#: core/templates/includes/navigation_list.html:31
+msgid "Контакты"
+msgstr "Contacts"
+
+#: contacts/templates/contacts/contacts.html:46
+msgid "Сотрудники"
+msgstr "Employees"
+
+#: contacts/templates/contacts/contacts.html:48
+msgid "Все сотрудники"
+msgstr "All employees"
+
 #: core/templates/admin/base_site.html:4
 msgid "Django site admin"
 msgstr ""
@@ -24,6 +44,38 @@ msgstr ""
 #: core/templates/admin/base_site.html:7
 msgid "Django administration"
 msgstr "Администрирование"
+
+#: core/templates/core/base.html:37
+msgid "Выход"
+msgstr "Log out"
+
+#: core/templates/core/base.html:40
+#: users/templates/users/reset_password.html:25
+#: users/templates/users/sign_in.html:36 users/templates/users/sign_up.html:46
+msgid "Вход"
+msgstr "Sign in"
+
+#: core/templates/core/base.html:41
+#: users/templates/users/reset_password.html:26
+#: users/templates/users/sign_in.html:32 users/templates/users/sign_up.html:10
+msgid "Регистрация"
+msgstr "Sign up"
+
+#: core/templates/core/base.html:44
+msgid "Администрирование"
+msgstr "Management"
+
+#: core/templates/core/base.html:162
+msgid "Мы находимся"
+msgstr "Our location"
+
+#: core/templates/core/base.html:166
+msgid "Приёмная комиссия"
+msgstr "Admission Committee"
+
+#: core/templates/core/base.html:170
+msgid "Электронная почта"
+msgstr "Email"
 
 #: core/templates/includes/navigation_list.html:6
 msgid "Главная"
@@ -38,6 +90,7 @@ msgid "История"
 msgstr "History"
 
 #: core/templates/includes/navigation_list.html:18
+#: home/templates/home/home.html:67
 msgid "Новости"
 msgstr "News"
 
@@ -46,6 +99,7 @@ msgid "Студентам"
 msgstr "For students"
 
 #: core/templates/includes/navigation_list.html:24
+#: materials/templates/materials/theses_list.html:11
 msgid "Дипломные работы"
 msgstr "Theses"
 
@@ -54,13 +108,140 @@ msgid "Расписание"
 msgstr "Schedule"
 
 #: core/templates/includes/navigation_list.html:26
+#: materials/templates/materials/manuals_list.html:11
 msgid "Методические указания"
 msgstr "Manuals"
-
-#: core/templates/includes/navigation_list.html:31
-msgid "Контакты"
-msgstr "Contacts"
 
 #: core/templates/includes/navigation_list.html:34
 msgid "Помощь"
 msgstr "Support"
+
+#: home/templates/home/home.html:69
+msgid "Все новости"
+msgstr "All news"
+
+#: news/templates/news/news_list.html:10
+msgid "Последние новости"
+msgstr "Last news"
+
+#: support/templates/support/support.html:12
+msgid "Задайте свой вопрос"
+msgstr "Ask your question"
+
+#: support/templates/support/support.html:18
+msgid "Ваше имя"
+msgstr "Your name"
+
+#: support/templates/support/support.html:23
+msgid "Ваш электронный адрес"
+msgstr "Your email"
+
+#: support/templates/support/support.html:28
+msgid "Тема обращения"
+msgstr "Topic of appeal"
+
+#: support/templates/support/support.html:33
+msgid "Ваш вопрос"
+msgstr "Your question"
+
+#: support/templates/support/support.html:38
+msgid "Задать вопрос"
+msgstr "Ask question"
+
+#: support/templates/support/support_done.html:12
+msgid "Обращение отправлено"
+msgstr "Appeal sent"
+
+#: support/templates/support/support_done.html:16
+msgid "Ответ придет на ваш электронный адрес после рассмотрения"
+msgstr "The answer will be sent to your email after review"
+
+#: users/templates/users/reset_password.html:10
+msgid "Восстановить пароль"
+msgstr "Restore password"
+
+#: users/templates/users/reset_password.html:15
+#: users/templates/users/sign_up.html:28
+msgid "Введите адрес электронной почты"
+msgstr "Enter your email address"
+
+#: users/templates/users/reset_password.html:23
+#: users/templates/users/sign_in.html:30
+msgid "Дополнительно"
+msgstr "Additionally"
+
+#: users/templates/users/reset_password.html:29
+msgid "Восстановить"
+msgstr "Restore"
+
+#: users/templates/users/reset_password_complete.html:12
+msgid "Пароль изменён"
+msgstr "Password changed"
+
+#: users/templates/users/reset_password_complete.html:16
+msgid "Ваш пароль был успешно изменён"
+msgstr "Your password has successfully changed"
+
+#: users/templates/users/reset_password_confirm.html:11
+msgid "Новый пароль"
+msgstr "New password"
+
+#: users/templates/users/reset_password_confirm.html:16
+msgid "Введите новый пароль"
+msgstr "Enter new password"
+
+#: users/templates/users/reset_password_confirm.html:22
+msgid "Повторите новый пароль"
+msgstr "Repeat new password"
+
+#: users/templates/users/reset_password_confirm.html:27
+msgid "Сменить пароль"
+msgstr "Change password"
+
+#: users/templates/users/reset_password_done.html:12
+msgid "Письмо отправлено"
+msgstr "Email sent"
+
+#: users/templates/users/reset_password_done.html:16
+msgid "Письмо с инструкциями по восстановлению пароля отправлено"
+msgstr "Email with password recovery instructions has been sent."
+
+#: users/templates/users/reset_password_done.html:18
+msgid "Вы должны получить его в ближайшее время"
+msgstr "You should receive it soon"
+
+#: users/templates/users/sign_in.html:10
+msgid "Авторизация"
+msgstr "Sign in"
+
+#: users/templates/users/sign_in.html:33 users/templates/users/sign_up.html:47
+msgid "Забыли пароль?"
+msgstr "Forgot your password"
+
+#: users/templates/users/sign_up.html:16
+msgid "Введите фамилию"
+msgstr "Enter your surname"
+
+#: users/templates/users/sign_up.html:20
+msgid "Введите имя"
+msgstr "Enter your name"
+
+#: users/templates/users/sign_up.html:24
+msgid "Введите отчество"
+msgstr "Enter your patronymic"
+
+#: users/templates/users/sign_up.html:33
+msgid "Введите пароль"
+msgstr "Enter password"
+
+#: users/templates/users/sign_up.html:39
+msgid "Повторите пароль"
+msgstr "Repeat password"
+
+#: users/templates/users/sign_up.html:44
+msgid "Уже зарегистрированы?"
+msgstr "Already registered?"
+
+#: users/templates/users/sign_up.html:50
+msgid "Зарегистрироваться"
+msgstr "Sign up"
