@@ -1,5 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% load i18n %}
 
 
 {% block content %}
@@ -7,9 +8,9 @@
     <section class="section">
         <div class="container">
             <div class="section__title-wrapper">
-                <h2 class="section__title">Новости</h2>
+                <h2 class="section__title">{% trans 'Новости' %}</h2>
 
-                <a class="navigation-link" href="{% url 'news_list' %}">Все новости</a>
+                <a class="navigation-link" href="{% url 'news_list' %}">{% trans 'Все новости' %}</a>
             </div>
 
             <div class="news-full__content">
@@ -24,7 +25,7 @@
                 </p>
             </div>
 
-            <a class="navigation-link navigation-link--full" onclick="history.back()">Назад</a>
+            <a class="navigation-link navigation-link--full" onclick="history.back()">{% trans 'Назад' %}</a>
         </div>
     </section>
 
