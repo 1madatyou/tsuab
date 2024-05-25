@@ -32,7 +32,11 @@
                     </div>
                 </div>
                 <div class="contact-block__image">
-                    <img src="{{ main_employee.image.url }}" alt="">
+                    {% if main_employee.image %}
+                        <img src="{{ main_employee.image.url }}">
+                    {% else %}
+                        <img src="{% static 'img/contacts/blank-user.svg' %}" alt="">
+                    {% endif %}
                 </div>
             </div>
 
@@ -54,7 +58,11 @@
 
                     <a class="employees__item" href="{% url 'employees-detail' e.pk %}">
                         <div class="employees__image">
-                            <img src="{{ e.image.url }}">
+                            {% if e.image %}
+                                <img src="{{ e.image.url }}">
+                            {% else %}
+                                <img src="{% static 'img/contacts/blank-user.svg' %}" alt="">
+                            {% endif %}
                         </div>
                         <div class="employees__text">
                             <p class="employees__title">{{ e.get_full_name }}</p>
