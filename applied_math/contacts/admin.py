@@ -3,13 +3,16 @@ from django.contrib import admin
 
 from .models import Employee, EmployeeContact
 
+from modeltranslation.admin import TranslationAdmin
+
 
 class EmployeeContactInline(admin.TabularInline):
     model = EmployeeContact
+    fields = ['title_en', 'title_ru', 'value']
 
 
 @admin.register(Employee)
-class EmployeeAdmin(admin.ModelAdmin):
+class EmployeeAdmin(TranslationAdmin):
     fields = ['surname', 'name', 'patronymic', 'position', 'image']
     inlines = [
         EmployeeContactInline
