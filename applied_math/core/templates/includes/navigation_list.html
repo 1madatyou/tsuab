@@ -9,7 +9,7 @@
         <div class="dropdown">
             <a class="nav__link">{% trans 'О кафедре' %}</a>
             <div class="dropdown-content">
-                <a class="nav__link" href="#" >{% trans 'История' %}</a>
+                <a class="nav__link" href="{% url 'history' %}" >{% trans 'История' %}</a>
 
             </div>
         </div>
@@ -22,7 +22,6 @@
             <a class="nav__link">{% trans 'Студентам' %}</a>
             <div class="dropdown-content">
                 <a class="nav__link" href="{% url 'theses_list' %}">{% trans 'Дипломные работы' %}</a>
-                <a class="nav__link" href="#">{% trans 'Расписание' %}</a>
                 <a class="nav__link" href="{% url 'manuals_list' %}">{% trans 'Методические указания' %}</a>
             </div>
         </div>

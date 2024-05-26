@@ -13,6 +13,10 @@ class Home(TemplateView):
         return context
     
 
+class History(TemplateView):
+    template_name = 'home/history.html'
+    
+
 
     
 

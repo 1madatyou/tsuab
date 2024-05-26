@@ -79,6 +79,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
 .site-container {
   overflow: hidden;
   display: flex;
@@ -229,13 +234,9 @@ a {
     visibility 0.3s ease-in-out;
 }
 
+
+
 .nav__dropdown-item {}
-
-.nav__btn {}
-
-.nav__btn--icon {}
-
-
 
 .nav__btn {
   border-radius: 10px;
@@ -534,6 +535,20 @@ a {
 
 .section__title--sub {
   font-size: 30px
+}
+
+.section-picture {
+  margin: 30px 0;
+}
+
+.section-picture__image {
+  border-radius: 10px;
+}
+
+.section-picture__description {
+  margin-top: 5px;
+  font-size: 13px;
+  color: gray;
 }
 
 .navigation-link {
@@ -1119,7 +1134,7 @@ a {
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 10px;
-  padding: 10px 15px;
+  padding: 10px 30px;
   gap: 19px;
 }
 
