@@ -142,6 +142,10 @@ p {
   max-width: var(--container-width);
 }
 
+.layout__container {
+  display: flex;
+}
+
 .centered {
   text-align: center;
 }
