@@ -9,7 +9,7 @@ from django.utils.translation import gettext_lazy as _
 
 def get_date_context(request):
     """Возвращает контекст с отформатированной сегодняшней датой"""
-    week_type = _('чётная неделя') if timezone.datetime.now().isocalendar()[1] % 2 else _('нечётная неделя')
+    week_type = _('чётная неделя') if timezone.datetime.now().isocalendar()[1] % 2 == 0 else _('нечётная неделя')
     today_datetime = _date(timezone.datetime.now() , "d E Y")
 
     context = {}
