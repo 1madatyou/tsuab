@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-25 12:48+0700\n"
+"POT-Creation-Date: 2024-06-02 13:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: contacts/templates/contacts/contacts.html:12
-#: core/templates/includes/navigation_list.html:31
+#: core/templates/includes/navigation_list.html:30
 msgid "Контакты"
 msgstr "Contacts"
 
@@ -64,15 +64,19 @@ msgstr "Sign up"
 msgid "Администрирование"
 msgstr "Management"
 
-#: core/templates/core/base.html:165
+#: core/templates/core/base.html:197
 msgid "Мы находимся"
 msgstr "Our location"
 
-#: core/templates/core/base.html:169
+#: core/templates/core/base.html:204
 msgid "Приёмная комиссия"
 msgstr "Admission Committee"
 
-#: core/templates/core/base.html:173
+#: core/templates/core/base.html:208
+msgid "Телефон"
+msgstr "Phone number"
+
+#: core/templates/core/base.html:212
 msgid "Электронная почта"
 msgstr "Email"
 
@@ -103,17 +107,27 @@ msgid "Дипломные работы"
 msgstr "Theses"
 
 #: core/templates/includes/navigation_list.html:25
-msgid "Расписание"
-msgstr "Schedule"
-
-#: core/templates/includes/navigation_list.html:26
 #: materials/templates/materials/manuals_list.html:11
 msgid "Методические указания"
 msgstr "Manuals"
 
-#: core/templates/includes/navigation_list.html:34
+#: core/templates/includes/navigation_list.html:33
 msgid "Помощь"
 msgstr "Support"
+
+#: home/templates/home/history.html:13
+#, fuzzy
+#| msgid "История"
+msgid "История кафедры"
+msgstr "History"
+
+#: home/templates/home/history.html:61
+msgid "Какая-то часть 1"
+msgstr ""
+
+#: home/templates/home/history.html:93
+msgid "Какая-то часть 2"
+msgstr ""
 
 #: home/templates/home/home.html:69 news/templates/news/news_detail.html:13
 msgid "Все новости"
@@ -248,6 +262,9 @@ msgstr "Already registered?"
 #: users/templates/users/sign_up.html:50
 msgid "Зарегистрироваться"
 msgstr "Sign up"
+
+#~ msgid "Расписание"
+#~ msgstr "Schedule"
 
 #~ msgid "нечётная неделя"
 #~ msgstr "odd week"
