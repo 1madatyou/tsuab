@@ -482,6 +482,7 @@ p {
 
 .history__container {
   display: flex;
+  align-items: center;
   gap: 100px;
 }
 
