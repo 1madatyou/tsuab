@@ -1137,6 +1137,26 @@ p {
   background: var(--main-color);
 }
 
+.gallery__main img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-nav {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.gallery-nav__item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
 .footer {
   margin-top: auto;
   padding: 40px 0;

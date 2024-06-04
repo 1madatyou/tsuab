@@ -5,87 +5,123 @@
 
 {% block content %}
 <main class="main">
-    <section class="hero">
-  <div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img class="hero__slide-bg" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt="" aria-hidden="true">
-      <div class="container">
-        <div class="hero__slide-content">
-          <h2 class="hero__title">Математика вдохновляет</h2>
+  <section class="hero">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="hero__slide-bg" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt=""
+            aria-hidden="true">
+          <div class="container">
+            <div class="hero__slide-content">
+              <h2 class="hero__title">Математика вдохновляет</h2>
 
-          <p class="hero__descr">
-            Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство!
-          </p>
+              <p class="hero__descr">
+                Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство!
+              </p>
 
-          <a class="hero__link" href="{% url 'history' %}">Подробнее</a>
+              <a class="hero__link" href="{% url 'history' %}">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img class="hero__slide-bg" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt=""
+            aria-hidden="true">
+          <div class="container">
+            <div class="hero__slide-content">
+              <h2 class="hero__title">Методические указания</h2>
+
+              <p class="hero__descr">
+                Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство!
+              </p>
+
+              <a class="hero__link" href="{% url 'manuals_list' %}">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img class="hero__slide-bg" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt=""
+            aria-hidden="true">
+          <div class="container">
+            <div class="hero__slide-content">
+              <h2 class="hero__title">Задайте свой вопрос</h2>
+
+              <p class="hero__descr">
+                Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство!
+              </p>
+
+              <a class="hero__link" href="{% url 'support' %}">Подробнее</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <img class="hero__slide-bg" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt="" aria-hidden="true">
-      <div class="container">
-        <div class="hero__slide-content">
-          <h2 class="hero__title">Методические указания</h2>
 
-          <p class="hero__descr">
-            Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство!
-          </p>
+      <div class="container hero__swiper-nav">
+        <div class="swiper-pagination"></div>
 
-          <a class="hero__link" href="{% url 'manuals_list' %}">Подробнее</a>
-        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
-    <div class="swiper-slide">
-      <img class="hero__slide-bg" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt="" aria-hidden="true">
-      <div class="container">
-        <div class="hero__slide-content">
-          <h2 class="hero__title">Задайте свой вопрос</h2>
+  </section>
 
-          <p class="hero__descr">
-            Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство!
+  <section class="section">
+    <div class="container">
+
+      <div class="section__title-wrapper">
+        <h2 class="section__title">{% trans 'Новости' %}</h2>
+
+        <a class="navigation-link" href="{% url 'news_list' %}">{% trans 'Все новости' %}</a>
+      </div>
+
+      <div class="list-reset news__list">
+
+        {% for news in last_news %}
+
+        <a class="news__item" href="{% url 'news_detail' news.pk %}">
+          <img class="news__item-img" loading="lazy" src="{{ news.pictures.last.picture.url }}" alt=""
+            aria-hidden="true">
+          <h3 class="news__item-title">{{ news.title }}</h3>
+          <p class="news__item-descr">
+            {{ news.text }}
           </p>
+        </a>
 
-          <a class="hero__link" href="{% url 'support' %}">Подробнее</a>
-        </div>
+        {% endfor %}
+
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container hero__swiper-nav">
-    <div class="swiper-pagination"></div>
+  <section class="section">
+    <div class="container">
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</div>
-</section>
+      <div class="section__title-wrapper">
+        <h2 class="section__title">{% trans 'Фотогалерея' %}</h2>
+      </div>
 
-    <section class="section">
-<div class="container">
-  <div class="section__title-wrapper">
-    <h2 class="section__title">{% trans 'Новости' %}</h2>
+      <div class="gallery">
+          <div class="gallery__main">
+            <img src="{% static 'img/history/red-tsuab.jpg' %}" alt="">
+          </div>
 
-    <a class="navigation-link" href="{% url 'news_list' %}">{% trans 'Все новости' %}</a>
-  </div>
+          <div class="gallery-nav">
+            <div class="gallery-nav__item">
+              <img src="{% static 'img/history/first.png' %}" alt="">
+            </div>
+            <div class="gallery-nav__item">
+              <img src="{% static 'img/history/second.png' %}" alt="">
+            </div>
+            <div class="gallery-nav__item">
+              <img src="{% static 'img/history/third.jpg' %}" alt="">
+            </div>
+            <div class="gallery-nav__item">
+              <img src="{% static 'img/history/red-tsuab.jpg' %}" alt="">
+            </div>
+          </div>
+      </div>
 
-  <div class="list-reset news__list">
+    </div>
+  </section>
 
-    {% for news in last_news %}
-
-      <a class="news__item" href="{% url 'news_detail' news.pk %}">
-        <img class="news__item-img" loading="lazy" src="{{ news.pictures.last.picture.url }}" alt="" aria-hidden="true">
-        <h3 class="news__item-title">{{ news.title }}</h3>
-        <p class="news__item-descr">
-          {{ news.text }}
-        </p>
-      </a>
-
-    {% endfor %}
-
-  </div>
-</div>
-</section>
-
-  </main>
+</main>
 {% endblock %}
