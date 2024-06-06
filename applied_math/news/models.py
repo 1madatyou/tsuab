@@ -33,9 +33,23 @@ class NewsPicture(models.Model):
         return "Изображение новости"
 
     class Meta:
-        verbose_name = "иображение"
+        verbose_name = "изображение"
         verbose_name_plural = "изображения"
 
+
+class NewsComment(models.Model):
+    """Модель комментария пользователя к новости"""
+    user = models.ForeignKey('users.User', on_delete=models.CASCADE, related_name='news_comments', verbose_name="Пользователь")
+    news = models.ForeignKey('news.News', on_delete=models.CASCADE, related_name='comments', verbose_name="Новость")
+    reply_to = models.ForeignKey('self', on_delete=models.CASCADE, related_name='replies', null=True)
+    text = models.TextField(verbose_name="Текст")
+
+    date_created = models.DateTimeField(verbose_name="Дата отправки")
+
+    class Meta:
+        verbose_name = "комментарий"
+        verbose_name_plural = "комментарии"
+        ordering = ['-id']
 
 
 
