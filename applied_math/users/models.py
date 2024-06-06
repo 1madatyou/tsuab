@@ -35,3 +35,6 @@ class User(AbstractUser):
     second_name = None
 
     objects = CustomUserManager()
+
+    def get_full_name(self):
+        return f'{self.surname} {self.name} {self.patronymic}'

@@ -44,7 +44,10 @@ class NewsComment(models.Model):
     reply_to = models.ForeignKey('self', on_delete=models.CASCADE, related_name='replies', null=True)
     text = models.TextField(verbose_name="Текст")
 
-    date_created = models.DateTimeField(verbose_name="Дата отправки")
+    date_created = models.DateTimeField(verbose_name="Дата отправки", auto_now_add=True)
+
+    def get_formatted_date_created(self):
+        return self.date_created.strftime('%d.%m.%Y')
 
     class Meta:
         verbose_name = "комментарий"
