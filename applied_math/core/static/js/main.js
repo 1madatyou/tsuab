@@ -47,6 +47,21 @@ function swiper() {
       prevEl: '.swiper-button-prev'
     }
   });
+
+  const gallery = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery', {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination'
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
 }
 
 /***/ }),

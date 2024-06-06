@@ -26,6 +26,22 @@ function toggleVisuallyImpairedMode() {
     }
 }
 
+function toggleCommentRepliesDisplaying(e) {
+    const currentComment = e.target.parentElement.parentElement
+    const currentCommentReplyList = currentComment.querySelector('.comment__replies')
+
+    currentCommentReplyList.classList.toggle('active')
+}
+
+function toggleCommentRepliesFormDisplaying(e) {
+    const currentComment = e.target.parentElement.parentElement
+    const currentCommentReplyForm = currentComment.querySelector('.comment__reply-form')
+
+    currentCommentReplyForm.classList.toggle('active')
+}
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     togglePasswordVisibility();
     toggleVisuallyImpairedMode();
@@ -33,11 +49,24 @@ window.addEventListener('DOMContentLoaded', () => {
     // nav form
     const navForm = document.querySelector('.nav__dropdown-form');
     const btnsSubmit = navForm.querySelectorAll('.nav__dropdown-submit');
-    const inputLang = navForm.querySelector('[name="language"]');
+
+    const replyShowButtons = document.querySelectorAll('.comment__show-replies-button')
+    const replyButtons = document.querySelectorAll('.comment__reply-button')
 
     btnsSubmit.forEach(item => {
         item.addEventListener('click', (e) => {
             navForm.submit();
         });
     });
+
+    replyShowButtons.forEach(item => {
+        item.addEventListener('click', toggleCommentRepliesDisplaying);
+    });
+
+    replyButtons.forEach(item => {
+        item.addEventListener('click', toggleCommentRepliesFormDisplaying);
+    });
+
+
+
 });
