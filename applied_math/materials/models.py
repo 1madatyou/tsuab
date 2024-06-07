@@ -42,3 +42,42 @@ class Manual(models.Model):
     
     def __str__(self):
         return self.title
+    
+
+class EducationalMaterial(models.Model):
+    """Модель учебных материалов"""
+    title = models.CharField(verbose_name="Тема", max_length=255)
+
+    date_upload = models.DateTimeField(verbose_name="Дата загрузки", auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = "обучающие материалы"
+        verbose_name = "материал для обучения"
+
+
+class EducationalMaterialItem(models.Model):
+    """Модель содержимого учебного материала"""
+    title = models.CharField(verbose_name="Название", max_length=255)
+
+    class Meta:
+        abstract = True
+
+
+class EducationalMaterialLink(EducationalMaterialItem):
+    material = models.ForeignKey('materials.EducationalMaterial', related_name='links', on_delete=models.CASCADE)
+    href = models.URLField(verbose_name="Ссылка")
+
+    class Meta:
+        verbose_name_plural = "ссылки"
+        verbose_name = "ссылка"
+
+
+class EducationalMaterialFile(EducationalMaterialItem):
+    material = models.ForeignKey('materials.EducationalMaterial', related_name='files', on_delete=models.CASCADE)
+    file = models.FileField(upload_to='educational_materials', verbose_name="Файл")
+
+    class Meta:
+        verbose_name_plural = "файлы"
+        verbose_name = "файл"
+
+
