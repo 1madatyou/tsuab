@@ -6,7 +6,7 @@
 {% block content %}
 <main class="main">
   <section class="hero">
-    <div class="swiper">
+    <div class="swiper hero__swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img class="hero__slide-bg" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt=""
@@ -31,7 +31,7 @@
               <h2 class="hero__title">Методические указания</h2>
 
               <p class="hero__descr">
-                Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство!
+                Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа в искусство! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vero natus, ipsa quisquam tempora consequatur exercitationem voluptate in perferendis nam ad error velit facere modi aliquam nihil quibusdam nostrum dolorem?
               </p>
 
               <a class="hero__link" href="{% url 'manuals_list' %}">Подробнее</a>
@@ -99,25 +99,26 @@
         <h2 class="section__title">{% trans 'Фотогалерея' %}</h2>
       </div>
 
-      <div class="gallery">
-          <div class="gallery__main">
-            <img src="{% static 'img/history/red-tsuab.jpg' %}" alt="">
+      <div class="swiper gallery__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="gallery__swiper-img" loading="lazy" src="https://i.ytimg.com/vi/s2oT2jzLO9Y/maxresdefault.jpg" alt=""
+              aria-hidden="true" height="500">
           </div>
+          <div class="swiper-slide">
+            <img class="gallery__swiper-img" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt=""
+              aria-hidden="true" height="500">
+          </div>
+          <div class="swiper-slide">
+            <img class="gallery__swiper-img" loading="lazy" src="{% static 'img/hero/hero-slide-bg-1.png' %}" alt=""
+              aria-hidden="true" height="500">
+          </div>
+        </div>
+  
+        <div class="swiper-pagination"></div>
 
-          <div class="gallery-nav">
-            <div class="gallery-nav__item">
-              <img src="{% static 'img/history/first.png' %}" alt="">
-            </div>
-            <div class="gallery-nav__item">
-              <img src="{% static 'img/history/second.png' %}" alt="">
-            </div>
-            <div class="gallery-nav__item">
-              <img src="{% static 'img/history/third.jpg' %}" alt="">
-            </div>
-            <div class="gallery-nav__item">
-              <img src="{% static 'img/history/red-tsuab.jpg' %}" alt="">
-            </div>
-          </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
 
     </div>

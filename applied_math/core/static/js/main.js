@@ -33,14 +33,28 @@ __webpack_require__.r(__webpack_exports__);
 
 function swiper() {
   swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay]);
-  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero__swiper', {
     loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false
+    // },
     pagination: {
-      el: '.swiper-pagination'
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    autoHeight: true
+  });
+
+  const gallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery__swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
     navigation: {
       nextEl: '.swiper-button-next',

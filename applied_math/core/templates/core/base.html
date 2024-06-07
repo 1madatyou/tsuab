@@ -155,25 +155,25 @@
                         
                         {% if LANGUAGE_CODE == 'ru' %}
 
-                            <button class="btn-reset btn nav__btn nav__btn--icon" aria-label="Сменить язык" type="button">
+                            <button class="btn-reset btn nav__btn nav__btn--padding-none nav__btn--icon" aria-label="Сменить язык" type="button">
                                 <img loading="lazy" src="{% static 'img/lang/lang-ru.svg' %}" width="30" height="21" alt="" aria-hidden="true">
                             </button>
     
                             <ul class="list-reset nav__dropdown-list">
                                 <li class="nav__dropdown-item">
-                                    <button class="btn-reset btn nav__btn nav__dropdown-submit nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="en">
+                                    <button class="btn-reset btn nav__btn nav__btn--padding-none nav__dropdown-submit nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="en">
                                         <img loading="lazy" src="{% static 'img/lang/lang-uk.svg' %}" width="30" height="21" alt="" aria-hidden="true">
                                     </button>
                                 </li>
                         </ul>
                         {% elif LANGUAGE_CODE == 'en' %}
                             
-                            <button class="btn-reset btn nav__btn nav__dropdown-submit nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="en">
+                            <button class="btn-reset btn nav__btn nav__btn--padding-none nav__dropdown-submit nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="en">
                                 <img loading="lazy" src="{% static 'img/lang/lang-uk.svg' %}" width="30" height="21" alt="" aria-hidden="true">
                             </button>
                             <ul class="list-reset nav__dropdown-list">
                                 <li class="nav__dropdown-item">
-                                    <button class="btn-reset btn nav__btn nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="ru">
+                                    <button class="btn-reset btn nav__btn nav__btn--padding-none nav__btn--icon" aria-label="Сменить язык" type="submit" name="language" value="ru">
                                         <img loading="lazy" src="{% static 'img/lang/lang-ru.svg' %}" width="30" height="21" alt="" aria-hidden="true">
                                     </button>
                                 </li>
