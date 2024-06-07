@@ -1273,7 +1273,7 @@ p {
 }
 
 .gallery__swiper-img {
-  height: 500px;
+  height: 600px;
   object-fit: cover;
   width: 100%;
 }
