@@ -278,6 +278,10 @@ p {
   object-fit: cover;
 }
 
+.nav__btn--padding-none {
+  padding: 0;
+}
+
 .nav__sub-content {
   padding: 20px 0 28px;
 }
@@ -366,16 +370,18 @@ p {
   padding: 140px 0 300px;
 }
 
-.hero .swiper-button-prev,
-.hero .swiper-button-next {
+
+
+.swiper-button-prev,
+.swiper-button-next {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.hero .swiper-button-prev::after,
-.hero .swiper-button-next::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -384,31 +390,33 @@ p {
   height: 65px;
 }
 
-.hero .swiper-button-prev {
+.swiper-button-prev {
   left: 0;
 }
 
-.hero .swiper-button-prev::after {
+.swiper-button-prev::after {
   background-image: url("../img/hero/hero-prev.svg");
 }
 
-.hero .swiper-button-next {
+.swiper-button-next {
   right: 0;
 }
 
-.hero .swiper-button-next::after {
+.swiper-button-next::after {
   background-image: url("../img/hero/hero-next.svg");
 }
 
-.hero .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   width: 18px;
   height: 18px;
   background-color: var(--light-color);
 }
 
-.hero .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
   background-color: var(--main-color);
 }
+
+
 
 .hero__slide-bg {
   position: absolute;
@@ -1264,24 +1272,35 @@ p {
   background: var(--main-color);
 }
 
-.gallery__main img {
-  max-height: 500px;
+.gallery__swiper-img {
+  height: 500px;
+  object-fit: cover;
   width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
 }
 
-.gallery-nav {
-  margin-top: 5px;
-  display: flex;
-  gap: 5px;
+.gallery__swiper {
+  padding-bottom: 40px;
 }
 
-.gallery-nav__item img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 5px;
+.gallery__swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.gallery__swiper .swiper-button-prev,
+.gallery__swiper .swiper-button-next {
+  margin-top: -40px;
+}
+
+.gallery__swiper .swiper-button-prev {
+  left: 30px;
+}
+
+.gallery__swiper .swiper-button-next {
+  right: 30px;
+}
+
+.gallery__swiper .swiper-pagination-bullet {
+  background-color: var(--main-color);
 }
 
 .footer {
