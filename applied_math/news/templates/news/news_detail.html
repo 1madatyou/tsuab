@@ -28,13 +28,15 @@
 
             <div class="comments">
                 <div class="comments__header">
-                    <h3>{{ comments.count }} Комментариев</h3>
+                    <h3>{{ count_of_comments }} Комментариев </h3>
                 </div>
                 
-                <form method="post" class="comments__form"> {% csrf_token %}
-                    <textarea class="comments__form-input " type="text" name="comment" placeholder="Введите комментарий"></textarea>
-                    <button class="comments__form-button" type="submit">Оставить комментарий</button>
-                </form>
+                {% if request.user.is_authenticated %}
+                    <form method="post" class="comments__form"> {% csrf_token %}
+                        <textarea class="comments__form-input " type="text" name="comment" placeholder="Введите комментарий"></textarea>
+                        <button class="comments__form-button" type="submit">Оставить комментарий</button>
+                    </form>
+                {% endif %}
 
                 <div class="comments__list">
                     {% for c in comments %}
@@ -60,9 +62,12 @@
                             </div>
 
                             <div class="comment__actions">
-                                <div class="comment__reply-button">
-                                    Ответить
-                                </div>
+                                {% if request.user.is_authenticated %}
+                                    <div class="comment__reply-button">
+                                        Ответить
+                                    </div>
+                                {% endif %}
+                                
 
                                 {% if c.replies.all.count > 0 %}
                                 <div class="comment__show-replies-button">
@@ -71,11 +76,15 @@
                                 {% endif %}
                             </div>
 
-                            <form method="post" class="comment__reply-form"> {% csrf_token %}
-                                <input type="hidden" name="comment_id" value="{{ c.id }}"> 
-                                <textarea class="comments__form-input " type="text" name="reply" placeholder="Введите ответ"></textarea>
-                                <button class="comments__form-button" type="submit">Ответить</button>
-                            </form>
+
+                            {% if request.user.is_authenticated %}
+                                <form method="post" class="comment__reply-form"> {% csrf_token %}
+                                    <input type="hidden" name="comment_id" value="{{ c.id }}"> 
+                                    <textarea class="comments__form-input " type="text" name="reply" placeholder="Введите ответ"></textarea>
+                                    <button class="comments__form-button" type="submit">Ответить</button>
+                                </form>
+                            {% endif %}
+                            
 
                             <div class="comment__replies">
                                 {% for r in c.replies.all %}
@@ -109,10 +118,11 @@
                         </div>
                     </div>
                     {% endfor %}
-
-                    
                 </div>
             </div>
+
+            {% include 'includes/pagination.html' with page_obj=comments paginator=paginator %}
+
 
             <a class="navigation-link navigation-link--full" onclick="history.back()">{% trans 'Назад' %}</a>
         </div>

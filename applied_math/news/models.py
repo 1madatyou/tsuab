@@ -41,13 +41,16 @@ class NewsComment(models.Model):
     """Модель комментария пользователя к новости"""
     user = models.ForeignKey('users.User', on_delete=models.CASCADE, related_name='news_comments', verbose_name="Пользователь")
     news = models.ForeignKey('news.News', on_delete=models.CASCADE, related_name='comments', verbose_name="Новость")
-    reply_to = models.ForeignKey('self', on_delete=models.CASCADE, related_name='replies', null=True)
+    reply_to = models.ForeignKey('self', on_delete=models.CASCADE, related_name='replies', null=True, verbose_name="Ответ к")
     text = models.TextField(verbose_name="Текст")
 
     date_created = models.DateTimeField(verbose_name="Дата отправки", auto_now_add=True)
 
     def get_formatted_date_created(self):
         return self.date_created.strftime('%d.%m.%Y')
+
+    def __str__(self):
+        return f'Комментарий {self.text}'
 
     class Meta:
         verbose_name = "комментарий"
