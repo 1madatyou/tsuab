@@ -64,7 +64,7 @@
     </div>
   </section>
 
-  <section class="section section--without-padding_bottom">
+  <section class="section ">
     <div class="container">
 
       <div class="section__title-wrapper">
@@ -92,7 +92,7 @@
     </div>
   </section>
 
-  <section class="section section--without-padding_bottom history">
+  <section class="section  history">
     <div class="container history__container">
 
         <div class="history__content">
@@ -123,6 +123,7 @@
     </div>
 </section>
 
+  {% if gallery_photos %}
   <section class="section">
     <div class="container">
 
@@ -132,22 +133,12 @@
 
       <div class="swiper gallery__swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img class="gallery__swiper-img" loading="lazy" src="https://img-fotki.yandex.ru/get/6401/36710540.82/0_a4fbc_81cdb2e8_XXL" alt=""
-              aria-hidden="true" height="500">
-          </div>
-          <div class="swiper-slide">
-            <img class="gallery__swiper-img" loading="lazy" src="https://gt-tomsk.ru/wp-content/uploads/2023/07/news03072320.jpg" alt=""
-              aria-hidden="true" height="500">
-          </div>
-          <div class="swiper-slide">
-            <img class="gallery__swiper-img" loading="lazy" src="{% static 'img/history/red-tsuab.jpg' %}" alt=""
-              aria-hidden="true" height="500">
-          </div>
-          <div class="swiper-slide">
-            <img class="gallery__swiper-img" loading="lazy" src="https://obzor.city/data/images/news_2019/06/tgasu/1_20_.jpg" alt=""
-              aria-hidden="true" height="500">
-          </div>
+          {% for p in gallery_photos %}
+            <div class="swiper-slide">
+              <img class="gallery__swiper-img" loading="lazy" src="{{ p.file.url }}" alt="{{ p.title }}"
+                aria-hidden="true" height="500">
+            </div>
+          {% endfor %}
         </div>
   
         <div class="swiper-pagination"></div>
@@ -158,6 +149,7 @@
 
     </div>
   </section>
+  {% endif %}
 
 </main>
 {% endblock %}

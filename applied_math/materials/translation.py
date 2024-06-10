@@ -4,7 +4,6 @@ from .models import (
     Manual, 
     DiplomaThesis, 
     
-    EducationalMaterial,
     EducationalMaterialFile,
     EducationalMaterialLink
 )

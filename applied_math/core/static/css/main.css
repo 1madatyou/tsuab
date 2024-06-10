@@ -354,7 +354,23 @@ p {
 .dropdown-content a:hover {
   background-color: var(--main-color);
   transition: 0.5s;
+}
 
+.dropdown-content a:hover:first-child {
+  background-color: var(--main-color);
+  transition: 0.5s;
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown-content a:hover:last-child {
+  background-color: var(--main-color);
+  transition: 0.5s;
+  border-radius: 0 0 10px 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--main-color);
+  transition: 0.5s;
 }
 
 /* Показать выпадающее меню при наведении курсора */
@@ -370,11 +386,9 @@ p {
   padding: 140px 0 300px;
 }
 
-
 .swiper-slide {
   height: initial;
 }
-
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -395,7 +409,7 @@ p {
 }
 
 .swiper-button-prev {
-  left: 0;
+  left: 500px;
 }
 
 .swiper-button-prev::after {
@@ -403,7 +417,7 @@ p {
 }
 
 .swiper-button-next {
-  right: 0;
+  right: 500px;
 }
 
 .swiper-button-next::after {
@@ -485,11 +499,10 @@ p {
 
 .section {
   padding-top: 100px;
-  padding-bottom: 150px;
 }
 
-.section--without-padding_bottom {
-  padding-bottom: 0;
+.section:last-child {
+  padding-bottom: 150px;
 }
 
 .history__container {
