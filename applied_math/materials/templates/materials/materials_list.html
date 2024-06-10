@@ -9,7 +9,9 @@
   <div class="container">
 
   {% for m in materials %}
-    <h1 class="section__title ">{{ m.title }}</h1>
+    <div class="section__title-wrapper">
+      <h1 class="section__title ">{{ m.title }}</h1>
+    </div>
 
 
       <h2>{% trans 'Файлы' %}:</h2>
