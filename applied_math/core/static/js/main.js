@@ -47,7 +47,6 @@ function swiper() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    autoHeight: true
   });
 
   const gallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery__swiper', {

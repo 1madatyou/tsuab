@@ -1,0 +1,63 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+  <main class="main">
+    <section class="section">
+  <div class="container">
+
+  {% for m in materials %}
+    <h1 class="section__title ">{{ m.title }}</h1>
+
+
+      <h2>{% trans 'Файлы' %}:</h2>
+      <div class="file-item__list">
+      {% for f in m.files.all %}
+
+          <div class="file-item">
+            <div class="file-item__content-wrapper">
+              <div class="file-item__title">
+                {{ f.title }}
+              </div>
+              <div class="file-item__file-wrapper">
+                <div class="file-item__date">
+                  {{ f.get_formatted_date_upload }}
+                </div>
+                <a class="file-item__file" href="{{ f.file.url }}" target="_blank" ></a>
+              </div>
+            </div>
+          </div>
+
+      {% endfor %}
+      </div>
+
+      <h2>{% trans 'Ссылки' %}:</h2>
+      <div class="file-item__list">
+
+        {% for l in m.links.all %}
+        <div class="file-item">
+          <div class="file-item__content-wrapper">
+            <div class="file-item__title">
+              {{ l.title }}
+            </div>
+            <div class="file-item__file-wrapper">
+              <div class="file-item__date">
+                {{ l.get_formatted_date_upload }}
+              </div>
+              <a class="file-item__link" href="{{ l.href }}" target="_blank" ></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+
+  {% endfor %}
+
+  </div>
+  </section>
+
+  </main>
+{% endblock %}

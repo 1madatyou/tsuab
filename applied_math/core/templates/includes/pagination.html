@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 
   <ul class="list-reset pagination">
@@ -6,7 +7,7 @@
     {% if page_obj.has_previous %}
 
         <li class="pagination-item">
-            <a class="pagination-link pagination-link--active" href="?page={{ page_obj.previous_page_number }}">Назад</a>
+            <a class="pagination-link pagination-link--active" href="?page={{ page_obj.previous_page_number }}">{% trans 'Назад' %}</a>
         </li>
 
     {% endif %}
@@ -30,7 +31,7 @@
     {% if page_obj.has_next %}
 
         <li class="pagination-item">
-            <a class="pagination-link pagination-link--active" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+            <a class="pagination-link pagination-link--active" href="?page={{ page_obj.next_page_number }}">{% trans 'Вперед' %}</a>
         </li>
 
     {% endif %}

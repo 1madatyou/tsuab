@@ -20,11 +20,6 @@ class DiplomaThesisTranslationOptions(TranslationOptions):
     fields = ['title']
 
 
-@register(EducationalMaterial)
-class EducationalMaterialTranslationOptions(TranslationOptions):
-    fields = ['title']
-
-
 @register(EducationalMaterialFile)
 class EducationalMaterialFileTranslationOptions(TranslationOptions):
     fields = ['title']

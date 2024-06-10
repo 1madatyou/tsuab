@@ -371,6 +371,10 @@ p {
 }
 
 
+.swiper-slide {
+  height: initial;
+}
+
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -916,6 +920,19 @@ p {
 
 .file-item__file::after {
   content: url("../img/theses/open.svg");
+  align-items: center;
+  position: relative;
+}
+
+.file-item__link {
+  display: flex;
+  gap: 2px;
+  font-size: 18px;
+  color: var(--blue-color);/
+}
+
+.file-item__link::after {
+  content: url("../img/theses/link.svg");
   align-items: center;
   position: relative;
 }

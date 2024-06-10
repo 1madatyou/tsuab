@@ -1,6 +1,7 @@
 {% extends 'core/base.html' %}
 {% load static %}
 {% load i18n %}
+{% load l10n %}
 
 {% load custom_filters %}
 
@@ -28,13 +29,15 @@
 
             <div class="comments">
                 <div class="comments__header">
-                    <h3>{{ count_of_comments }} Комментариев </h3>
+                    {% blocktrans with plural=count_of_comments|ru_plural:"комментарий,комментария,комментариев" %}
+                    <h3>{{ count_of_comments }} {{ plural }}</h3>
+                    {% endblocktrans %}
                 </div>
                 
                 {% if request.user.is_authenticated %}
                     <form method="post" class="comments__form"> {% csrf_token %}
-                        <textarea class="comments__form-input " type="text" name="comment" placeholder="Введите комментарий"></textarea>
-                        <button class="comments__form-button" type="submit">Оставить комментарий</button>
+                        <textarea class="comments__form-input " type="text" name="comment" placeholder="{% trans 'Введите комментарий' %}"></textarea>
+                        <button class="comments__form-button" type="submit">{% trans 'Оставить комментарий' %}</button>
                     </form>
                 {% endif %}
 
@@ -64,14 +67,14 @@
                             <div class="comment__actions">
                                 {% if request.user.is_authenticated %}
                                     <div class="comment__reply-button">
-                                        Ответить
+                                        {% trans 'Ответить' %}
                                     </div>
                                 {% endif %}
                                 
 
                                 {% if c.replies.all.count > 0 %}
                                 <div class="comment__show-replies-button">
-                                    {{ c.replies.all.count }} ответа
+                                    {{ c.replies.all.count }} {{ c.replies.all.count|ru_plural:"ответ,ответа,ответов" }}
                                 </div>
                                 {% endif %}
                             </div>
@@ -80,8 +83,8 @@
                             {% if request.user.is_authenticated %}
                                 <form method="post" class="comment__reply-form"> {% csrf_token %}
                                     <input type="hidden" name="comment_id" value="{{ c.id }}"> 
-                                    <textarea class="comments__form-input " type="text" name="reply" placeholder="Введите ответ"></textarea>
-                                    <button class="comments__form-button" type="submit">Ответить</button>
+                                    <textarea class="comments__form-input " type="text" name="reply" placeholder="{% trans 'Введите ответ' %}"></textarea>
+                                    <button class="comments__form-button" type="submit">{% trans 'Ответить' %}</button>
                                 </form>
                             {% endif %}
                             

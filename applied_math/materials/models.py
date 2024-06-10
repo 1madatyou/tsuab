@@ -48,7 +48,6 @@ class EducationalMaterial(models.Model):
     """Модель учебных материалов"""
     title = models.CharField(verbose_name="Тема", max_length=255)
 
-    date_upload = models.DateTimeField(verbose_name="Дата загрузки", auto_now_add=True)
 
     class Meta:
         verbose_name_plural = "обучающие материалы"
@@ -58,6 +57,11 @@ class EducationalMaterial(models.Model):
 class EducationalMaterialItem(models.Model):
     """Модель содержимого учебного материала"""
     title = models.CharField(verbose_name="Название", max_length=255)
+
+    date_upload = models.DateTimeField(verbose_name="Дата загрузки", auto_now_add=True)
+
+    def get_formatted_date_upload(self):
+        return self.date_upload.strftime('%d.%m.%Y')
 
     class Meta:
         abstract = True

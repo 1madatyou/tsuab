@@ -33,8 +33,8 @@ class EducationalMaterialFileInline(admin.TabularInline):
 
 
 @admin.register(EducationalMaterial)
-class EducationalMaterialAdmin(TranslationAdmin):
-    list_display = ['title', 'date_upload']
+class EducationalMaterialAdmin(admin.ModelAdmin):
+    list_display = ['title']
     inlines = [
         EducationalMaterialLinkInline,
         EducationalMaterialFileInline,
