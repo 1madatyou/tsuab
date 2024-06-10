@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 10:25+0700\n"
+"POT-Creation-Date: 2024-06-11 06:09+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,123 +18,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: contacts/templates/contacts/contacts.html:12
-#: core/templates/includes/navigation_list.html:32
 msgid "Контакты"
 msgstr "Contacts"
 
-#: contacts/templates/contacts/contacts.html:50
 msgid "Сотрудники"
 msgstr "Employees"
 
-#: contacts/templates/contacts/contacts.html:52
-#: contacts/templates/contacts/employees_list.html:13
 msgid "Все сотрудники"
 msgstr "All employees"
 
-#: contacts/templates/contacts/employees_detail.html:13
 msgid "О сотруднике"
 msgstr "About employee"
 
-#: core/templates/admin/base_site.html:4
 msgid "Django site admin"
 msgstr ""
 
-#: core/templates/admin/base_site.html:7
 msgid "Django administration"
 msgstr "Администрирование"
 
-#: core/templates/core/base.html:38
 msgid "Выход"
 msgstr "Log out"
 
-#: core/templates/core/base.html:41
-#: users/templates/users/reset_password.html:25
-#: users/templates/users/sign_in.html:36 users/templates/users/sign_up.html:46
 msgid "Вход"
 msgstr "Sign in"
 
-#: core/templates/core/base.html:42
-#: users/templates/users/reset_password.html:26
-#: users/templates/users/sign_in.html:32 users/templates/users/sign_up.html:10
 msgid "Регистрация"
 msgstr "Sign up"
 
-#: core/templates/core/base.html:45
 msgid "Администрирование"
 msgstr "Management"
 
-#: core/templates/core/base.html:197
 msgid "Мы находимся"
 msgstr "Our location"
 
-#: core/templates/core/base.html:204
 msgid "Приёмная комиссия"
 msgstr "Admission Committee"
 
-#: core/templates/core/base.html:208
 msgid "Телефон"
 msgstr "Phone number"
 
-#: core/templates/core/base.html:212
 msgid "Электронная почта"
 msgstr "Email"
 
-#: core/templates/includes/navigation_list.html:6
 msgid "Главная"
 msgstr "Home"
 
-#: core/templates/includes/navigation_list.html:10
-#: home/templates/home/home.html:100
 msgid "О кафедре"
 msgstr "About"
 
-#: core/templates/includes/navigation_list.html:12
 msgid "История"
 msgstr "History"
 
-#: core/templates/includes/navigation_list.html:18
-#: home/templates/home/home.html:71 news/templates/news/news_detail.html:12
 msgid "Новости"
 msgstr "News"
 
-#: core/templates/includes/navigation_list.html:22
 msgid "Студентам"
 msgstr "For students"
 
-#: core/templates/includes/navigation_list.html:24
-#: materials/templates/materials/theses_list.html:11
 msgid "Дипломные работы"
 msgstr "Theses"
 
-#: core/templates/includes/navigation_list.html:25
-#: home/templates/home/home.html:31
-#: materials/templates/materials/manuals_list.html:11
 msgid "Методические указания"
 msgstr "Manuals"
 
-#: core/templates/includes/navigation_list.html:26
 msgid "Библиотека CAD и BIM"
 msgstr "CAD and BIM library"
 
-#: core/templates/includes/navigation_list.html:35
 msgid "Помощь"
 msgstr "Support"
 
-#: core/templates/includes/pagination.html:10
-#: news/templates/news/news_detail.html:127
 msgid "Назад"
 msgstr "Back"
 
-#: core/templates/includes/pagination.html:34
 msgid "Вперед"
 msgstr "Forward"
 
-#: home/templates/home/history.html:13
 msgid "История кафедры"
 msgstr "History"
 
-#: home/templates/home/history.html:17
 msgid ""
 "В вузе идея образовать кафедру прикладной математики вынашивалась с конца 70-"
 "х гг., когда с развитием средств вычислительной техники начинается обучение "
@@ -148,7 +109,6 @@ msgstr ""
 "programming and the use of computers. The new discipline required "
 "independent educational, scientific, and methodological support."
 
-#: home/templates/home/history.html:18
 msgid ""
 "Кафедра прикладной математики была создана 31.05.1984 г. на основании "
 "приказа MB и ССО РСФСР № 344 от 31.05.1984 г. и приказа ТИСИ № 1033 от "
@@ -162,7 +122,6 @@ msgstr ""
 "headed by Professor Leonid Evgenievich Popov, Doctor of Physical and "
 "Mathematical Sciences."
 
-#: home/templates/home/history.html:19
 msgid ""
 "В состав кафедры первоначально вошли доценты Б.В. Дудка, Л. Я. Пудан, А.В. "
 "Ушаков, А.Е. Янковская. На момент создания кафедры в университете была "
@@ -179,15 +138,12 @@ msgstr ""
 "students and staff the skills of programming and using computers to solve "
 "engineering problems."
 
-#: home/templates/home/history.html:29
 msgid "Леонид Евгеньевич Попов"
 msgstr "Leonid Evgenievich Popov"
 
-#: home/templates/home/history.html:41
 msgid "Развитие кафедры в 1986-2012 гг."
 msgstr "Development of the Department from 1986 to 2012"
 
-#: home/templates/home/history.html:46
 msgid ""
 "С 1986 по 2012 гг. кафедру возглавлял профессор, доктор физико-"
 "математических наук Михаил Иванович Слободской. С 1986 г. преподаватели "
@@ -199,7 +155,6 @@ msgstr ""
 "department's faculty has been delivering lectures on mathematical modeling "
 "and computer technologies for postgraduate students of all TGSU programs."
 
-#: home/templates/home/history.html:47
 msgid ""
 "С 10.11.1987 г. кафедра была переведена в ранг общеинститутской, в её состав "
 "передана вычислительная лаборатория с техникой и штатами (39 человек) с "
@@ -210,7 +165,6 @@ msgstr ""
 "people) was transferred to its structure to effectively manage the use of "
 "computing technology."
 
-#: home/templates/home/history.html:48
 msgid ""
 "В 1989 г. в ТГАСУ появился первый персональный компьютер фирмы IBM и первый "
 "сканер, в следующем году – первый студенческий класс на базе IBM PC; сейчас "
@@ -220,7 +174,6 @@ msgstr ""
 "at TGSU, and the following year, the first student class based on IBM PC; "
 "there are now more than 30 such classes."
 
-#: home/templates/home/history.html:49
 msgid ""
 "С 1998 г. кафедра входит в состав факультета экономики и менеджмента, а с "
 "2010 г. — в состав общеобразовательного факультета."
@@ -229,7 +182,6 @@ msgstr ""
 "Management, and since 2010, it has been part of the General Education "
 "Faculty."
 
-#: home/templates/home/history.html:50
 msgid ""
 "Первое свидетельство об официальной регистрации программы для ЭВМ (М.Е. "
 "Семенов, С.Н. Колупаева) в \"Федеральной службе по интеллектуальной "
@@ -239,7 +191,6 @@ msgstr ""
 "Semenov, S.N. Kolupaeva) in the 'Federal Service for Intellectual Property, "
 "Patents, and Trademarks' was obtained in 2005."
 
-#: home/templates/home/history.html:51
 msgid ""
 "В 2008 г. начал работать сайт кафедры, а команда ТГАСУ под руководством М.Е. "
 "Семенова одержала победу в региональном туре (Сибирский федеральный округ) "
@@ -253,7 +204,6 @@ msgstr ""
 "in the All-Russian final in Moscow among the 7 Russian teams - winners of "
 "the regional rounds."
 
-#: home/templates/home/history.html:52
 msgid ""
 "Сотрудники кафедры ведут обучение более чем по 30 курсам, которые наряду с "
 "чисто математическими дисциплинами выступают в качестве базовых "
@@ -263,15 +213,12 @@ msgstr ""
 "along with purely mathematical disciplines, serve as basic specialized "
 "courses for many university specialties."
 
-#: home/templates/home/history.html:61
 msgid "Слободской Михаил Иванович"
 msgstr "Mikhail Ivanovich Slobodskoy"
 
-#: home/templates/home/history.html:73
 msgid "Руководство кафедрой с 2012 г."
 msgstr "Department Leadership Since 2012"
 
-#: home/templates/home/history.html:77
 msgid ""
 "С 2012 по 2016 гг. кафедру возглавляла член-корреспондент МАН ВШ, академик "
 "МАИ, доктор физико-математических наук, профессор Светлана Николаевна "
@@ -289,7 +236,6 @@ msgstr ""
 "'Applied Informatics' with a specialization in 'Applied Informatics in the "
 "Construction Industry' was accredited."
 
-#: home/templates/home/history.html:78
 msgid ""
 "С 1.10.2016 г. по 2018 г. кафедру возглавил проректор по научной работе, "
 "доцент, кандидат физ-мат наук Постников Сергей Николаевич. Многое "
@@ -306,15 +252,12 @@ msgstr ""
 "disciplines, working out documents and state standards, and tools for "
 "successful accreditation."
 
-#: home/templates/home/history.html:86
 msgid "Постников Сергей Николаевич"
 msgstr "Sergey Nikolayevich Postnikov"
 
-#: home/templates/home/history.html:98
 msgid "Обновление и аккредитация"
 msgstr "Renovation and Accreditation"
 
-#: home/templates/home/history.html:102
 msgid ""
 "В 2018 году кафедра прошла процедуру аккредитации под руководством "
 "заведующим кафедрой Радченко Павла Андреевича, который вступил в эту "
@@ -324,7 +267,6 @@ msgstr ""
 "leadership of the department head, Pavel Andreyevich Radchenko, who had "
 "recently assumed this position."
 
-#: home/templates/home/history.html:103
 msgid ""
 "В эти годы происходило обновление преподавательского состава кафедры, с "
 "окончанием преподавательской деятельности и уходом с кафедры её почетных и "
@@ -343,7 +285,6 @@ msgstr ""
 "in its scientific activities. A new direction appeared: Modeling the "
 "behavior of materials and structures under impulse loading."
 
-#: home/templates/home/history.html:104
 msgid ""
 "В 2019 году Мещеулов Никита Владимирович дополнил необходимый "
 "образовательный контент для студентов профиля «Прикладная информатика в "
@@ -354,15 +295,12 @@ msgstr ""
 "Construction Industry» profile with software products in the field of "
 "construction."
 
-#: home/templates/home/history.html:112
 msgid "Мещеулов Никита Владимирович"
 msgstr "Nikita Vladimirovich Meshcheulov"
 
-#: home/templates/home/history.html:123
 msgid "Современные достижения кафедры"
 msgstr "Recent Achievements of the Department"
 
-#: home/templates/home/history.html:128
 msgid ""
 "В последнее время всё большую значимость в научных разработках кафедры "
 "приобретает направление «Распознавание дефектов дорожного покрытия по фото- "
@@ -380,7 +318,6 @@ msgstr ""
 "and Associate Professor and Candidate of Technical Sciences Alexander "
 "Valeryevich Titov."
 
-#: home/templates/home/history.html:130
 msgid ""
 "В 2024 г. кафедра отметила 40-летие, что означает, что она ещё молода и "
 "имеет широкие возможности для дальнейшего развития, как в научном, так и в "
@@ -390,15 +327,12 @@ msgstr ""
 "is still young and has wide opportunities for further development, both "
 "scientifically and educationally."
 
-#: home/templates/home/history.html:138
 msgid "Шумилов Борис Михайлович"
 msgstr "Boris Mikhailovich Shumilov"
 
-#: home/templates/home/history.html:148
 msgid "Новое руководство и развитие кафедры"
 msgstr "New Leadership and Department Development"
 
-#: home/templates/home/history.html:154
 msgid ""
 "В 2020 г. заведующей кафедрой становится Галина Александровна Онопенко, "
 "доктор физико-математических наук, профессор, почетный работник сферы "
@@ -412,7 +346,6 @@ msgstr ""
 "of the direction 09.03.03 «Applied Informatics» profile «Applied Informatics "
 "in the construction industry» was successfully completed."
 
-#: home/templates/home/history.html:156
 msgid ""
 "За последние два года был проведён ремонт в помещениях кафедры и шести "
 "компьютерных классах, были закуплены новые компьютеры, обновлено программное "
@@ -423,15 +356,12 @@ msgstr ""
 "software has been updated. Plans include further upgrading the department's "
 "computer park."
 
-#: home/templates/home/history.html:164
 msgid "Онопенко Галина Александровна"
 msgstr "Galina Alexandrovna Onopenko"
 
-#: home/templates/home/history.html:174
 msgid "Перспективы и планы"
 msgstr "Prospects and Plans"
 
-#: home/templates/home/history.html:179
 msgid ""
 "Второй год подряд, начиная с 2020 г., министерство выделяет всё больше "
 "бюджетных мест для студентов ИТ-специальностей. С каждым годом это число "
@@ -445,7 +375,6 @@ msgstr ""
 "program for the development of the digital economy, and the overall digital "
 "transformation of education in our country."
 
-#: home/templates/home/history.html:181
 msgid ""
 "Предстоит грандиозная работа по внедрению и созданию новых курсов, программ "
 "дисциплин не только кафедрой прикладной математики, но и другими кафедрами, "
@@ -462,11 +391,9 @@ msgstr ""
 "agreements with manufacturing enterprises and companies working in this "
 "professional field."
 
-#: home/templates/home/home.html:16
 msgid "Математика вдохновляет"
 msgstr "Mathematics Inspires"
 
-#: home/templates/home/home.html:19
 msgid ""
 "Добро пожаловать на кафедру Прикладной Математики, где мы преображаем числа "
 "в искусство!"
@@ -474,12 +401,9 @@ msgstr ""
 "Welcome to the Department of Applied Mathematics, where we transform numbers "
 "into art!"
 
-#: home/templates/home/home.html:22 home/templates/home/home.html:37
-#: home/templates/home/home.html:52
 msgid "Подробнее"
 msgstr "Learn More"
 
-#: home/templates/home/home.html:34
 msgid ""
 "Если у Вас возникли вопросы по обучению, ознакомьтесь с нашими методическими "
 "указаниями, где Вы найдёте подробные инструкции и рекомендации по основным "
@@ -492,11 +416,9 @@ msgstr ""
 "understand any difficulties and achieve successful results in the "
 "educational process!"
 
-#: home/templates/home/home.html:46 support/templates/support/support.html:12
 msgid "Задайте свой вопрос"
 msgstr "Ask your question"
 
-#: home/templates/home/home.html:49
 msgid ""
 "Нужна консультация? Задайте свой вопрос преподавателям, они помогут решить "
 "Ваши проблемы, разобраться с трудностями в обучении и понять учебный "
@@ -506,11 +428,9 @@ msgstr ""
 "help you solve itYour problems, deal with learning difficulties and "
 "understand educationalmaterial."
 
-#: home/templates/home/home.html:73 news/templates/news/news_detail.html:14
 msgid "Все новости"
 msgstr "All news"
 
-#: home/templates/home/home.html:105
 msgid ""
 "На кафедре обучаются студенты общеобразовательного, медико-биологического и "
 "педиатрического факультетов."
@@ -518,7 +438,6 @@ msgstr ""
 "Students from the general education, medical-biological, and pediatric "
 "faculties study at the department."
 
-#: home/templates/home/home.html:108
 msgid ""
 "Кафедра прикладной математики является ответственной за проведение "
 "централизованного тестирования студентов по текущим дисциплинам и проверке "
@@ -531,7 +450,6 @@ msgstr ""
 "knowledge, as well as for the preliminary training of students on internet "
 "testing simulators during university accreditation and the annual testing."
 
-#: home/templates/home/home.html:111
 msgid ""
 "В учебном процессе преподаватели используют новейшие технологии, "
 "разрабатываются лекционные и практические занятия с применением компьютерных "
@@ -545,7 +463,6 @@ msgstr ""
 "presentations. Laboratory and practical classes use assignment options with "
 "examples in electronic form."
 
-#: home/templates/home/home.html:114
 msgid ""
 "На кафедре разработана собственная тестовая система «Вариант 1», которая "
 "используется преподавателями кафедры для контроля знаний студентов по "
@@ -557,7 +474,6 @@ msgstr ""
 "only related to applied mathematics but also other departments of the "
 "faculty."
 
-#: home/templates/home/home.html:117
 msgid ""
 "В составе коллектива кафедры — 1 профессор, 3 старших преподавателя и 2 "
 "доцента."
@@ -565,9 +481,14 @@ msgstr ""
 "The department's team consists of 1 professor, 3 senior lecturers, and 2 "
 "associate professors."
 
-#: home/templates/home/home.html:130
 msgid "Фотогалерея"
 msgstr "Gallery"
+
+msgid "Файлы"
+msgstr "Files"
+
+msgid "Ссылки"
+msgstr "Links"
 
 msgid "Введите комментарий"
 msgstr "Enter a comment"
@@ -575,157 +496,125 @@ msgstr "Enter a comment"
 msgid "Оставить комментарий"
 msgstr "Leave a comment"
 
-msgid "Введите ответ"
-msgstr "Enter a reply"
-
 msgid "Ответить"
 msgstr "Reply"
 
-#: news/templates/news/news_list.html:10
+msgid "Введите ответ"
+msgstr "Enter a reply"
+
 msgid "Последние новости"
 msgstr "Last news"
 
-#: support/templates/support/support.html:18
 msgid "Ваше имя"
 msgstr "Your name"
 
-#: support/templates/support/support.html:23
 msgid "Ваш электронный адрес"
 msgstr "Your email"
 
-#: support/templates/support/support.html:28
 msgid "Тема обращения"
 msgstr "Topic of appeal"
 
-#: support/templates/support/support.html:33
 msgid "Ваш вопрос"
 msgstr "Your question"
 
-#: support/templates/support/support.html:38
 msgid "Задать вопрос"
 msgstr "Ask question"
 
-#: support/templates/support/support_done.html:12
 msgid "Обращение отправлено"
 msgstr "Appeal sent"
 
-#: support/templates/support/support_done.html:16
 msgid "Ответ придет на ваш электронный адрес после рассмотрения"
 msgstr "The answer will be sent to your email after review"
 
-#: users/templates/users/reset_password.html:10
 msgid "Восстановить пароль"
 msgstr "Restore password"
 
-#: users/templates/users/reset_password.html:15
-#: users/templates/users/sign_in.html:15 users/templates/users/sign_up.html:28
 msgid "Введите адрес электронной почты"
 msgstr "Enter your email address"
 
-#: users/templates/users/reset_password.html:23
-#: users/templates/users/sign_in.html:30
 msgid "Дополнительно"
 msgstr "Additionally"
 
-#: users/templates/users/reset_password.html:29
 msgid "Восстановить"
 msgstr "Restore"
 
-#: users/templates/users/reset_password_complete.html:12
 msgid "Пароль изменён"
 msgstr "Password changed"
 
-#: users/templates/users/reset_password_complete.html:16
 msgid "Ваш пароль был успешно изменён"
 msgstr "Your password has successfully changed"
 
-#: users/templates/users/reset_password_confirm.html:11
 msgid "Новый пароль"
 msgstr "New password"
 
-#: users/templates/users/reset_password_confirm.html:16
 msgid "Введите новый пароль"
 msgstr "Enter new password"
 
-#: users/templates/users/reset_password_confirm.html:22
 msgid "Повторите новый пароль"
 msgstr "Repeat new password"
 
-#: users/templates/users/reset_password_confirm.html:27
 msgid "Сменить пароль"
 msgstr "Change password"
 
-#: users/templates/users/reset_password_done.html:12
 msgid "Письмо отправлено"
 msgstr "Email sent"
 
-#: users/templates/users/reset_password_done.html:16
 msgid "Письмо с инструкциями по восстановлению пароля отправлено"
 msgstr "Email with password recovery instructions has been sent."
 
-#: users/templates/users/reset_password_done.html:18
 msgid "Вы должны получить его в ближайшее время"
 msgstr "You should receive it soon"
 
-#: users/templates/users/sign_in.html:10
 msgid "Авторизация"
 msgstr "Sign in"
 
-#: users/templates/users/sign_in.html:18 users/templates/users/sign_up.html:33
 msgid "Введите пароль"
 msgstr "Enter password"
 
-#: users/templates/users/sign_in.html:33 users/templates/users/sign_up.html:47
 msgid "Забыли пароль?"
 msgstr "Forgot your password"
 
-#: users/templates/users/sign_up.html:16
 msgid "Введите фамилию"
 msgstr "Enter your surname"
 
-#: users/templates/users/sign_up.html:20
 msgid "Введите имя"
 msgstr "Enter your name"
 
-#: users/templates/users/sign_up.html:24
 msgid "Введите отчество"
 msgstr "Enter your patronymic"
 
-#: users/templates/users/sign_up.html:39
 msgid "Повторите пароль"
 msgstr "Repeat password"
 
-#: users/templates/users/sign_up.html:44
 msgid "Уже зарегистрированы?"
 msgstr "Already registered?"
 
-#: users/templates/users/sign_up.html:50
 msgid "Зарегистрироваться"
 msgstr "Sign up"
 
 #~ msgid "Расписание"
 #~ msgstr "Schedule"
 
-msgid "нечётная неделя"
-msgstr "odd week"
+#~ msgid "нечётная неделя"
+#~ msgstr "odd week"
 
-msgid "чётная неделя"
-msgstr "even week"
+#~ msgid "чётная неделя"
+#~ msgstr "even week"
 
-msgid "комментарий"
-msgstr "comment"
+#~ msgid "комментарий"
+#~ msgstr "comment"
 
-msgid "комментария"
-msgstr "comments"
+#~ msgid "комментария"
+#~ msgstr "comments"
 
-msgid "комментариев"
-msgstr "comments"
+#~ msgid "комментариев"
+#~ msgstr "comments"
 
-msgid "ответ"
-msgstr "reply"
+#~ msgid "ответ"
+#~ msgstr "reply"
 
-msgid "ответа"
-msgstr "replies"
+#~ msgid "ответа"
+#~ msgstr "replies"
 
-msgid "ответов"
-msgstr "replies"
+#~ msgid "ответов"
+#~ msgstr "replies"
