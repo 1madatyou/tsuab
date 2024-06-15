@@ -408,7 +408,7 @@ p {
   height: 65px;
 }
 
-.swiper-button-prev {
+.swiper-button-prev.hero {
   position: absolute;
   left: -100px;
   top: -350px
@@ -418,11 +418,10 @@ p {
   background-image: url("../img/hero/hero-prev.svg");
 }
 
-.swiper-button-next {
+.swiper-button-next.hero {
   position: absolute;
   right: -100px;
   top: -350px
-
 }
 
 .swiper-button-next::after {
