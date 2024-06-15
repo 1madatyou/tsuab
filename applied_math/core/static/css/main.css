@@ -409,7 +409,9 @@ p {
 }
 
 .swiper-button-prev {
-  left: 500px;
+  position: absolute;
+  left: -100px;
+  top: -350px
 }
 
 .swiper-button-prev::after {
@@ -417,7 +419,10 @@ p {
 }
 
 .swiper-button-next {
-  right: 500px;
+  position: absolute;
+  right: -100px;
+  top: -350px
+
 }
 
 .swiper-button-next::after {
