@@ -6,16 +6,19 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('contacts', '0003_alter_employeecontact_options_employee_is_main'),
+        ("contacts", "0003_alter_employeecontact_options_employee_is_main"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='employee',
-            options={'verbose_name': 'cотрудник', 'verbose_name_plural': 'cотрудники'},
+            name="employee",
+            options={"verbose_name": "cотрудник", "verbose_name_plural": "cотрудники"},
         ),
         migrations.AlterModelOptions(
-            name='employeecontact',
-            options={'verbose_name': 'контакт', 'verbose_name_plural': 'контакты сотрудника'},
+            name="employeecontact",
+            options={
+                "verbose_name": "контакт",
+                "verbose_name_plural": "контакты сотрудника",
+            },
         ),
     ]

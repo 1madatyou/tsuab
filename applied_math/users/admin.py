@@ -6,8 +6,18 @@ from .models import User
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('email', 'date_joined', 'last_login')
-    fields = ('email', 'surname', 'name', 'patronymic', 'is_staff', 'is_active', 'last_login', 'date_joined', 'groups')
+    list_display = ("email", "date_joined", "last_login")
+    fields = (
+        "email",
+        "surname",
+        "name",
+        "patronymic",
+        "is_staff",
+        "is_active",
+        "last_login",
+        "date_joined",
+        "groups",
+    )
 
     def has_add_permission(self, request: HttpRequest) -> bool:
         return False

@@ -7,20 +7,34 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='GalleryPhoto',
+            name="GalleryPhoto",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('file', models.FileField(upload_to='gallery/', verbose_name='Файл')),
-                ('is_show', models.BooleanField(choices=[(1, 'Да'), (0, 'Нет')], default=1, verbose_name='Отображается')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("file", models.FileField(upload_to="gallery/", verbose_name="Файл")),
+                (
+                    "is_show",
+                    models.BooleanField(
+                        choices=[(1, "Да"), (0, "Нет")],
+                        default=1,
+                        verbose_name="Отображается",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'изображение',
-                'verbose_name_plural': 'изображения галереи',
+                "verbose_name": "изображение",
+                "verbose_name_plural": "изображения галереи",
             },
         ),
     ]

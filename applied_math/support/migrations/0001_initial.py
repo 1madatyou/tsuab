@@ -7,22 +7,29 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='SupportTicket',
+            name="SupportTicket",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('user_name', models.CharField(max_length=255)),
-                ('user_email', models.EmailField(max_length=254)),
-                ('subject', models.CharField(max_length=255)),
-                ('text', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("user_name", models.CharField(max_length=255)),
+                ("user_email", models.EmailField(max_length=254)),
+                ("subject", models.CharField(max_length=255)),
+                ("text", models.TextField()),
             ],
             options={
-                'verbose_name': 'Обращение',
-                'verbose_name_plural': 'Обращения',
+                "verbose_name": "Обращение",
+                "verbose_name_plural": "Обращения",
             },
         ),
     ]

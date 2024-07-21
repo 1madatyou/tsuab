@@ -7,17 +7,29 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='DiplomaThesis',
+            name="DiplomaThesis",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='Тема')),
-                ('file', models.FileField(upload_to='theses', verbose_name='Файл')),
-                ('date_upload', models.DateTimeField(auto_now_add=True, verbose_name='Дата загрузки')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=255, verbose_name="Тема")),
+                ("file", models.FileField(upload_to="theses", verbose_name="Файл")),
+                (
+                    "date_upload",
+                    models.DateTimeField(
+                        auto_now_add=True, verbose_name="Дата загрузки"
+                    ),
+                ),
             ],
         ),
     ]

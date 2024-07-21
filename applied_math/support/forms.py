@@ -5,6 +5,7 @@ from .models import SupportTicket
 
 class SupportTicketForm(forms.ModelForm):
     """Форма для модели обращения в поддержку"""
-    class Meta: 
+
+    class Meta:
         model = SupportTicket
-        fields = ['user_name', 'user_email', 'subject', 'text']
+        fields = ["user_name", "user_email", "subject", "text"]

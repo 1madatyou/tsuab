@@ -6,12 +6,15 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('materials', '0003_manual_alter_diplomathesis_options'),
+        ("materials", "0003_manual_alter_diplomathesis_options"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='manual',
-            options={'verbose_name': 'методическое указание', 'verbose_name_plural': 'методические указания'},
+            name="manual",
+            options={
+                "verbose_name": "методическое указание",
+                "verbose_name_plural": "методические указания",
+            },
         ),
     ]

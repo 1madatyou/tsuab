@@ -7,29 +7,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('support', '0001_initial'),
+        ("support", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='supportticket',
-            name='date_created',
-            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),
+            model_name="supportticket",
+            name="date_created",
+            field=models.DateTimeField(
+                auto_now_add=True, default=django.utils.timezone.now
+            ),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='supportticket',
-            name='subject',
-            field=models.CharField(max_length=255, verbose_name='Тема'),
+            model_name="supportticket",
+            name="subject",
+            field=models.CharField(max_length=255, verbose_name="Тема"),
         ),
         migrations.AlterField(
-            model_name='supportticket',
-            name='text',
-            field=models.TextField(verbose_name='Текст'),
+            model_name="supportticket",
+            name="text",
+            field=models.TextField(verbose_name="Текст"),
         ),
         migrations.AlterField(
-            model_name='supportticket',
-            name='user_name',
-            field=models.CharField(max_length=255, verbose_name='Имя пользователя'),
+            model_name="supportticket",
+            name="user_name",
+            field=models.CharField(max_length=255, verbose_name="Имя пользователя"),
         ),
     ]

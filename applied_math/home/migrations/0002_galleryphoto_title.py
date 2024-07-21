@@ -6,14 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0001_initial'),
+        ("home", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='galleryphoto',
-            name='title',
-            field=models.CharField(default='Воровайки', max_length=255, verbose_name='Название'),
+            model_name="galleryphoto",
+            name="title",
+            field=models.CharField(
+                default="Воровайки", max_length=255, verbose_name="Название"
+            ),
             preserve_default=False,
         ),
     ]

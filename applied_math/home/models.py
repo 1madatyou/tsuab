@@ -6,7 +6,11 @@ class GalleryPhoto(models.Model):
 
     title = models.CharField(max_length=255, verbose_name="Название")
     file = models.FileField(verbose_name="Файл", upload_to="gallery/")
-    is_show = models.BooleanField(verbose_name="Отображается", default=True, choices=[(True, "Да"), (False, "Нет")])
+    is_show = models.BooleanField(
+        verbose_name="Отображается",
+        default=True,
+        choices=[(True, "Да"), (False, "Нет")],
+    )
 
     def __str__(self):
         return self.title

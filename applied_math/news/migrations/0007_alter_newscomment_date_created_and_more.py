@@ -7,18 +7,24 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('news', '0006_alter_newspicture_options_newscomment'),
+        ("news", "0006_alter_newspicture_options_newscomment"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='newscomment',
-            name='date_created',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Дата отправки'),
+            model_name="newscomment",
+            name="date_created",
+            field=models.DateTimeField(auto_now_add=True, verbose_name="Дата отправки"),
         ),
         migrations.AlterField(
-            model_name='newscomment',
-            name='reply_to',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='replies', to='news.newscomment', verbose_name='Ответ к'),
+            model_name="newscomment",
+            name="reply_to",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="replies",
+                to="news.newscomment",
+                verbose_name="Ответ к",
+            ),
         ),
     ]

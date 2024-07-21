@@ -5,9 +5,9 @@ from .models import Employee, EmployeeContact
 
 @register(Employee)
 class EmployeeTranslationOptions(TranslationOptions):
-    fields = ['position', 'surname', 'name', 'patronymic']
+    fields = ["position", "surname", "name", "patronymic"]
 
 
 @register(EmployeeContact)
 class EmployeeContactTranslationOptions(TranslationOptions):
-    fields = ['title']
+    fields = ["title"]

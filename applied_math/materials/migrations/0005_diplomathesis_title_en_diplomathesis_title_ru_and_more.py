@@ -6,58 +6,70 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('materials', '0004_alter_manual_options'),
+        ("materials", "0004_alter_manual_options"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='diplomathesis',
-            name='title_en',
-            field=models.CharField(max_length=255, null=True, verbose_name='Тема'),
+            model_name="diplomathesis",
+            name="title_en",
+            field=models.CharField(max_length=255, null=True, verbose_name="Тема"),
         ),
         migrations.AddField(
-            model_name='diplomathesis',
-            name='title_ru',
-            field=models.CharField(max_length=255, null=True, verbose_name='Тема'),
+            model_name="diplomathesis",
+            name="title_ru",
+            field=models.CharField(max_length=255, null=True, verbose_name="Тема"),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='author_name_en',
-            field=models.CharField(max_length=255, null=True, verbose_name='Имя автора'),
+            model_name="manual",
+            name="author_name_en",
+            field=models.CharField(
+                max_length=255, null=True, verbose_name="Имя автора"
+            ),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='author_name_ru',
-            field=models.CharField(max_length=255, null=True, verbose_name='Имя автора'),
+            model_name="manual",
+            name="author_name_ru",
+            field=models.CharField(
+                max_length=255, null=True, verbose_name="Имя автора"
+            ),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='author_patronymic_en',
-            field=models.CharField(max_length=255, null=True, verbose_name='Отчество автора'),
+            model_name="manual",
+            name="author_patronymic_en",
+            field=models.CharField(
+                max_length=255, null=True, verbose_name="Отчество автора"
+            ),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='author_patronymic_ru',
-            field=models.CharField(max_length=255, null=True, verbose_name='Отчество автора'),
+            model_name="manual",
+            name="author_patronymic_ru",
+            field=models.CharField(
+                max_length=255, null=True, verbose_name="Отчество автора"
+            ),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='author_surname_en',
-            field=models.CharField(max_length=255, null=True, verbose_name='Фамилия автора'),
+            model_name="manual",
+            name="author_surname_en",
+            field=models.CharField(
+                max_length=255, null=True, verbose_name="Фамилия автора"
+            ),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='author_surname_ru',
-            field=models.CharField(max_length=255, null=True, verbose_name='Фамилия автора'),
+            model_name="manual",
+            name="author_surname_ru",
+            field=models.CharField(
+                max_length=255, null=True, verbose_name="Фамилия автора"
+            ),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='title_en',
-            field=models.CharField(max_length=255, null=True, verbose_name='Тема'),
+            model_name="manual",
+            name="title_en",
+            field=models.CharField(max_length=255, null=True, verbose_name="Тема"),
         ),
         migrations.AddField(
-            model_name='manual',
-            name='title_ru',
-            field=models.CharField(max_length=255, null=True, verbose_name='Тема'),
+            model_name="manual",
+            name="title_ru",
+            field=models.CharField(max_length=255, null=True, verbose_name="Тема"),
         ),
     ]

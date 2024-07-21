@@ -8,33 +8,58 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='News',
+            name="News",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='Заголовок')),
-                ('text', models.TextField(verbose_name='Текст новости')),
-                ('date_created', models.DateTimeField(editable=False, verbose_name='Дата создания')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=255, verbose_name="Заголовок")),
+                ("text", models.TextField(verbose_name="Текст новости")),
+                (
+                    "date_created",
+                    models.DateTimeField(editable=False, verbose_name="Дата создания"),
+                ),
             ],
             options={
-                'verbose_name': 'Новость',
-                'verbose_name_plural': 'Новости',
+                "verbose_name": "Новость",
+                "verbose_name_plural": "Новости",
             },
         ),
         migrations.CreateModel(
-            name='NewsPicture',
+            name="NewsPicture",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('picture', models.FileField(upload_to='', verbose_name='Изображение')),
-                ('news', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='pictures', to='news.news')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("picture", models.FileField(upload_to="", verbose_name="Изображение")),
+                (
+                    "news",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="pictures",
+                        to="news.news",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Изображение',
-                'verbose_name_plural': 'Изображения',
+                "verbose_name": "Изображение",
+                "verbose_name_plural": "Изображения",
             },
         ),
     ]

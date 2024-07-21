@@ -7,19 +7,31 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Schedule',
+            name="Schedule",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('file', models.FileField(upload_to='schedule', verbose_name='Файл')),
-                ('date_updated', models.DateTimeField(auto_now=True, verbose_name='Дата последнего обновления')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("file", models.FileField(upload_to="schedule", verbose_name="Файл")),
+                (
+                    "date_updated",
+                    models.DateTimeField(
+                        auto_now=True, verbose_name="Дата последнего обновления"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Расписание',
+                "verbose_name": "Расписание",
             },
         ),
     ]

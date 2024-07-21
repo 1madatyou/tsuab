@@ -3,7 +3,8 @@ from django.db import models
 
 class SupportTicket(models.Model):
     """Модель обращения в службу поддержки"""
-    user_name = models.CharField(verbose_name='Имя пользователя', max_length=255)
+
+    user_name = models.CharField(verbose_name="Имя пользователя", max_length=255)
     user_email = models.EmailField()
     subject = models.CharField(verbose_name="Тема", max_length=255)
     text = models.TextField(verbose_name="Текст")
@@ -15,4 +16,4 @@ class SupportTicket(models.Model):
 
     class Meta:
         verbose_name = "обращение"
-        verbose_name_plural = "обращения" 
+        verbose_name_plural = "обращения"

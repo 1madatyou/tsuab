@@ -7,22 +7,40 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Employee',
+            name="Employee",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Имя')),
-                ('surname', models.CharField(max_length=255, verbose_name='Фамилия')),
-                ('patronymic', models.CharField(max_length=255, verbose_name='Отчество')),
-                ('position', models.TextField(verbose_name='Должность')),
-                ('image', models.FileField(blank=True, null=True, upload_to='employees/', verbose_name='Изображение')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255, verbose_name="Имя")),
+                ("surname", models.CharField(max_length=255, verbose_name="Фамилия")),
+                (
+                    "patronymic",
+                    models.CharField(max_length=255, verbose_name="Отчество"),
+                ),
+                ("position", models.TextField(verbose_name="Должность")),
+                (
+                    "image",
+                    models.FileField(
+                        blank=True,
+                        null=True,
+                        upload_to="employees/",
+                        verbose_name="Изображение",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Сотрудники',
+                "verbose_name": "Сотрудники",
             },
         ),
     ]

@@ -7,24 +7,32 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('materials', '0008_alter_educationalmaterialfile_material_and_more'),
+        ("materials", "0008_alter_educationalmaterialfile_material_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='educationalmaterial',
-            name='date_upload',
+            model_name="educationalmaterial",
+            name="date_upload",
         ),
         migrations.AddField(
-            model_name='educationalmaterialfile',
-            name='date_upload',
-            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now, verbose_name='Дата загрузки'),
+            model_name="educationalmaterialfile",
+            name="date_upload",
+            field=models.DateTimeField(
+                auto_now_add=True,
+                default=django.utils.timezone.now,
+                verbose_name="Дата загрузки",
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='educationalmateriallink',
-            name='date_upload',
-            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now, verbose_name='Дата загрузки'),
+            model_name="educationalmateriallink",
+            name="date_upload",
+            field=models.DateTimeField(
+                auto_now_add=True,
+                default=django.utils.timezone.now,
+                verbose_name="Дата загрузки",
+            ),
             preserve_default=False,
         ),
     ]

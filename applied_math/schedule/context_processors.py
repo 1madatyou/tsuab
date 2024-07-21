@@ -7,7 +7,7 @@ def get_schedule_context(request):
         schedule = Schedule.objects.get()
     except Schedule.DoesNotExist:
         schedule = None
-        
-    context = {'schedule': schedule}
+
+    context = {"schedule": schedule}
 
     return context

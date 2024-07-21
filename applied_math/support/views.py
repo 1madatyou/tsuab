@@ -5,9 +5,9 @@ from .forms import SupportTicketForm
 
 
 class Support(FormView):
-    template_name = 'support/support.html'
+    template_name = "support/support.html"
     form_class = SupportTicketForm
-    success_url = 'done'
+    success_url = "done"
 
     def form_valid(self, form) -> HttpResponse:
         form.save()
@@ -15,4 +15,4 @@ class Support(FormView):
 
 
 class SupportDone(TemplateView):
-    template_name = 'support/support_done.html'
+    template_name = "support/support_done.html"

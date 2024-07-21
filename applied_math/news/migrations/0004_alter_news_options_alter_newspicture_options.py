@@ -6,16 +6,23 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('news', '0003_alter_news_options'),
+        ("news", "0003_alter_news_options"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='news',
-            options={'ordering': ['-id'], 'verbose_name': 'новость', 'verbose_name_plural': 'новости'},
+            name="news",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "новость",
+                "verbose_name_plural": "новости",
+            },
         ),
         migrations.AlterModelOptions(
-            name='newspicture',
-            options={'verbose_name': 'иображение', 'verbose_name_plural': 'изображения'},
+            name="newspicture",
+            options={
+                "verbose_name": "иображение",
+                "verbose_name_plural": "изображения",
+            },
         ),
     ]

@@ -9,5 +9,3 @@ class SupportTicketAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request: HttpRequest) -> bool:
         return False
-
-

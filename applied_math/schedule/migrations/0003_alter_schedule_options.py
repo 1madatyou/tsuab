@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('schedule', '0002_alter_schedule_options'),
+        ("schedule", "0002_alter_schedule_options"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='schedule',
-            options={'verbose_name': 'расписание', 'verbose_name_plural': 'расписание'},
+            name="schedule",
+            options={"verbose_name": "расписание", "verbose_name_plural": "расписание"},
         ),
     ]

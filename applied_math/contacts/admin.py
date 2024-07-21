@@ -8,16 +8,14 @@ from modeltranslation.admin import TranslationAdmin
 
 class EmployeeContactInline(admin.TabularInline):
     model = EmployeeContact
-    fields = ['title_en', 'title_ru', 'value']
+    fields = ["title_en", "title_ru", "value"]
 
 
 @admin.register(Employee)
 class EmployeeAdmin(TranslationAdmin):
-    fields = ['surname', 'name', 'patronymic', 'position', 'image']
-    inlines = [
-        EmployeeContactInline
-    ]
-    change_form_template = 'contacts/employee_change_form.html'
+    fields = ["surname", "name", "patronymic", "position", "image"]
+    inlines = [EmployeeContactInline]
+    change_form_template = "contacts/employee_change_form.html"
 
     def response_change(self, request, obj):
         if "_set-main" in request.POST:
@@ -33,8 +31,3 @@ class EmployeeAdmin(TranslationAdmin):
             self.message_user(request, "Сотрудник назначен главным")
             return HttpResponseRedirect(".")
         return super().response_change(request, obj)
-
-
-
-
-    

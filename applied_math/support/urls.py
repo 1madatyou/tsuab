@@ -4,6 +4,6 @@ from .views import Support, SupportDone
 
 
 urlpatterns = [
-    path('', Support.as_view(), name='support'),
-    path('done', SupportDone.as_view(), name='support_done')
+    path("", Support.as_view(), name="support"),
+    path("done", SupportDone.as_view(), name="support_done"),
 ]
